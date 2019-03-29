@@ -1,0 +1,12 @@
+@import 'utils/variables';
+@import 'utils/mixins';
+@import 'base/typography';
+@import 'base/base';
+@import 'base/reset';
+
+@import 'partials/navigation';
+ 
+
+body {
+  min-height: 200vh;
+}

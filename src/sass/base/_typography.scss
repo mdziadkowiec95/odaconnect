@@ -1,0 +1,18 @@
+html {
+  font-size: 93.75%;
+
+  @include breakpoint(md) {
+    font-size: 100%;
+  }
+}
+
+body {
+  font-family: $font-primary;
+} 
+
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: map-get($colors, dark);
+}

@@ -1,0 +1,17 @@
+.container {
+  margin: 0 auto;
+
+  padding: 0 15px;
+
+  width: 100%;
+
+  @include breakpoint(sm) { 
+    max-width: 740px;
+  }
+  @include breakpoint(md) { 
+    max-width: 960px;
+   }
+  @include breakpoint(lg) { 
+    max-width: 1270px;
+   } 
+}

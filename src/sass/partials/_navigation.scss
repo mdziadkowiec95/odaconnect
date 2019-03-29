@@ -1,0 +1,244 @@
+.nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  width: 100%;
+
+  z-index: map-get($layers, nav);
+
+  &--scrolled {
+    // border-bottom: 1px solid #ccc;
+    .nav__logo {
+      width: 60px;
+
+      @include breakpoint(sm) {
+        width: 75px;
+      }
+    }
+  }
+
+  &__container {
+    padding: 1rem;
+
+    @include breakpoint(sm) {
+      display: flex;
+      
+      align-items: center;
+
+      padding: 1rem 0;
+     
+    }
+  }
+
+  &__brand {
+    transition: opacity .3s ease;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+
+  &__logo {
+    width: 80px;
+
+    transition: width .3s ease;
+
+    @include breakpoint(sm) {
+      width: 100px;
+    }
+  }
+
+  &__menu {
+    position: fixed;
+  
+    top: -100vh;
+    left: 0;
+    
+    margin-top: 0;
+
+    width: 100vw;
+    height: 100vh;
+  
+    display: flex;
+  
+    flex-direction: column;
+    
+    justify-content: center;
+  
+    align-items: center;
+  
+    flex-wrap: wrap;
+  
+    margin-left: auto;
+  
+    background-color: rgba(map-get($colors, dark--lighten), .9);
+  
+    opacity: 0;
+  
+    transition: top .6s, opacity .6s;
+    transition-timing-function: map-get($easings, easeOutEx);
+  
+    @include breakpoint(sm) {
+      position: static;
+  
+      flex-direction: row;
+      justify-content: flex-end;
+  
+      width: auto;
+      height: auto;
+  
+      opacity: 1;
+
+      background: transparent;
+    }
+  
+    &.collapsed {
+      top: 0;
+      
+      opacity: 1;
+    }
+  }
+
+  &__item {    
+    width: 100%;
+
+    @include breakpoint(sm) {
+      margin: .2rem .4rem;
+      
+      width: auto;
+    }
+
+  }
+ 
+  &__link {
+    @include hardware();
+
+    &:link,
+    &:visited {
+      display: block;
+
+      padding: 1rem 0;
+      
+      color: map-get($colors, white);
+
+      font-size: 1.2rem;
+
+      text-transform: uppercase;
+
+      text-align: center;
+
+      cursor: pointer; 
+
+      transition: background-color .3s ease, color .3s ease;
+
+      @include breakpoint(sm) {
+        display: inline-block;
+
+        position: relative;
+
+        padding: .4rem 0;
+        
+        color: map-get($colors, dark--lighten);
+
+        font-size: .9rem;
+        font-weight: 500;
+
+        &::before,
+        &::after {
+          @include pseudo();
+
+          width: 0;
+          height: 1px;
+
+          background-color: map-get($colors, accent);
+
+          transition: width .3s ease;
+        }
+
+        &::before {
+          top: 0;
+          left: 0;
+        }
+
+        &::after {
+          bottom: 0;
+          right: 0;
+        }
+      }
+    }
+
+    &:active,
+    &:hover {
+      background-color: map-get($colors, white);
+      color: map-get($colors, dark--lighten); 
+      
+      @include breakpoint(sm) {
+        color: map-get($colors, dark--lightest);
+
+        &::before,
+        &::after {
+          width: 100%;
+        } 
+      }
+    }
+  }
+}
+
+.nav-toggler {
+  display: block;
+
+  z-index: map-get($layers, nav-toggler); 
+
+  position: fixed;
+
+  top: 12px;
+  right: 20px;
+
+  width: 40px;
+  height: 40px;
+
+  cursor: pointer;
+
+  @include breakpoint(sm) {
+    display: none;
+  }
+
+  span {
+    display: block;
+    
+    
+    position: absolute;
+
+    top: 18px;
+
+    width: 100%;
+    height: 3px;
+
+    background-color: map-get($colors, accent);
+
+    &::before,
+    &::after {
+      content: '';
+
+      position: absolute;
+
+      width: 100%;
+      height: 3px;
+
+      background-color: map-get($colors, accent);
+    }
+
+    &::before {
+      top: -10px;
+    }
+
+    &::after {
+      bottom: -10px;
+    }
+  }
+
+  &.is-open {
+   
+  }
+}

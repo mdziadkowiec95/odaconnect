@@ -1,0 +1,21 @@
+$font-primary: 'Montserrat', sans-serif;
+
+$colors: (
+  white: #fff,
+  dark: #333,
+  dark--lighten: #424242,
+  dark--lightest: #888,
+  primary: #005475,
+  accent: #E5231B,
+);
+
+$layers: (
+  nav: 200,
+  nav-toggler: 1030,
+  slogan: 10,
+);
+
+$easings: (
+  easeOutEx: cubic-bezier(0.19, 1, 0.22, 1),
+);
+
