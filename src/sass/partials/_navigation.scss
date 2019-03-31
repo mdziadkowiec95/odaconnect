@@ -7,8 +7,9 @@
 
   z-index: map-get($layers, nav);
 
+  background-color: map-get($colors, white);
+
   &--scrolled {
-    // border-bottom: 1px solid #ccc;
     .nav__logo {
       width: 60px;
 
@@ -141,7 +142,7 @@
         
         color: map-get($colors, dark--lighten);
 
-        font-size: .9rem;
+        font-size: .8rem;
         font-weight: 500;
 
         &::before,

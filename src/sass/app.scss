@@ -5,6 +5,11 @@
 @import 'base/reset';
 
 @import 'partials/navigation';
+
+@import '../../node_modules/swiper/dist/css/swiper';
+@import 'sections/swiper';
+
+@import 'components/slogan';
  
 
 body {

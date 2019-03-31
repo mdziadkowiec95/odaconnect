@@ -76,7 +76,8 @@ function styles(cb) {
       beautify: true
     }))
     .pipe(autoprefixer({
-      browsers: ['last 2 versions', '> 2%']
+      grid: true,
+      browsers: ['last 2 versions', '> 1%']
     }))
     .pipe(sourcemaps.write('.'))
     .pipe(dest(css.out))
