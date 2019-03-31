@@ -1,0 +1,57 @@
+.reason {
+  
+
+  &__container {
+    @include breakpoint(sm) {
+      display: flex;
+    }
+  }
+
+  &__box {
+    flex: 1;
+
+    padding: 3rem 1rem;
+
+    border-bottom: 1px solid map-get($colors, primary);
+
+    background-color: map-get($colors, primary);
+    color: map-get($colors, white);
+
+    text-align: center;
+
+    transition: all .3s ease;
+
+    cursor: pointer;
+
+    &:hover {
+     opacity: .9;
+
+      .reason__title {
+       transform: translateY(-5px);
+     }
+    }
+
+    &--lighten {
+      opacity: .8;
+
+      background-color: map-get($colors, primary);
+
+      &:hover {
+        opacity: .9;
+
+        background-color: map-get($colors, primary);
+        color: map-get($colors, white);
+      }
+    }
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    
+    text-transform: uppercase;
+
+    transition: transform .3s ease;
+  }
+
+
+}

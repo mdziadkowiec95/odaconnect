@@ -3,6 +3,7 @@
 @import 'base/typography';
 @import 'base/base';
 @import 'base/reset';
+@import 'utils/helpers';
 
 @import 'partials/navigation';
 
@@ -10,7 +11,8 @@
 @import 'sections/swiper';
 
 @import 'components/slogan';
- 
+
+@import 'sections/reason';
 
 body {
   min-height: 200vh;

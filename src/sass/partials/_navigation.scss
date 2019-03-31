@@ -10,6 +10,9 @@
   background-color: map-get($colors, white);
 
   &--scrolled {
+    .nav-toggler {
+      top: 13px;
+    }
     .nav__logo {
       width: 60px;
 
@@ -189,11 +192,11 @@
 .nav-toggler {
   display: block;
 
-  z-index: map-get($layers, nav-toggler); 
+  z-index: map-get($layers, nav-toggler);  
 
   position: fixed;
 
-  top: 12px;
+  top: 20px;
   right: 20px;
 
   width: 40px;
@@ -201,13 +204,14 @@
 
   cursor: pointer;
 
+  transition: top .3s ease;
+
   @include breakpoint(sm) {
     display: none;
   }
 
   span {
     display: block;
-    
     
     position: absolute;
 
@@ -217,6 +221,8 @@
     height: 3px;
 
     background-color: map-get($colors, accent);
+
+    transition: transform .2s ease;
 
     &::before,
     &::after {
@@ -228,6 +234,8 @@
       height: 3px;
 
       background-color: map-get($colors, accent);
+
+      transition: top .2s ease, transform .2s ease;
     }
 
     &::before {
@@ -240,6 +248,16 @@
   }
 
   &.is-open {
-   
+    span {
+      transform: rotate(45deg);
+    }
+   span::before {
+     opacity: 0;
+   }
+
+   span::after {
+    top: 0; 
+    transform: rotate(-90deg);
+  }
   }
 }

@@ -11,6 +11,7 @@ document.querySelector('.nav').addEventListener('click', (e) => {
     e.preventDefault();
     navToggler.classList.toggle('is-open');
     navMenu.classList.toggle('collapsed');
+    // document.body.classList.toggle('is-blocked');
   } else if (e.target.matches('.nav__link, .nav__link *')) {
     navToggler.classList.remove('is-open');
     navMenu.classList.remove('collapsed');

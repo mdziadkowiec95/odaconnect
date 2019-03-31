@@ -42,6 +42,10 @@ img {
   height: auto;
 }
 
+.is-blocked {
+  overflow: hidden;
+}
+
 .nav {
   position: fixed;
   top: 0;
@@ -49,6 +53,10 @@ img {
   width: 100%;
   z-index: 200;
   background-color: #fff;
+}
+
+.nav--scrolled .nav-toggler {
+  top: 13px;
 }
 
 .nav--scrolled .nav__logo {
@@ -142,11 +150,13 @@ img {
   display: block;
   z-index: 1030;
   position: fixed;
-  top: 12px;
+  top: 20px;
   right: 20px;
   width: 40px;
   height: 40px;
   cursor: pointer;
+  -webkit-transition: top .3s ease;
+  transition: top .3s ease;
 }
 
 .nav-toggler span {
@@ -155,7 +165,11 @@ img {
   top: 18px;
   width: 100%;
   height: 3px;
-  background-color: #E5231B;
+  background-color: #AF1D22;
+  -webkit-transition: -webkit-transform .2s ease;
+  transition: -webkit-transform .2s ease;
+  transition: transform .2s ease;
+  transition: transform .2s ease, -webkit-transform .2s ease;
 }
 
 .nav-toggler span::before,.nav-toggler span::after {
@@ -163,7 +177,11 @@ img {
   position: absolute;
   width: 100%;
   height: 3px;
-  background-color: #E5231B;
+  background-color: #AF1D22;
+  -webkit-transition: top .2s ease, -webkit-transform .2s ease;
+  transition: top .2s ease, -webkit-transform .2s ease;
+  transition: top .2s ease, transform .2s ease;
+  transition: top .2s ease, transform .2s ease, -webkit-transform .2s ease;
 }
 
 .nav-toggler span::before {
@@ -172,6 +190,21 @@ img {
 
 .nav-toggler span::after {
   bottom: -10px;
+}
+
+.nav-toggler.is-open span {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.nav-toggler.is-open span::before {
+  opacity: 0;
+}
+
+.nav-toggler.is-open span::after {
+  top: 0;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }/**
  * Swiper 4.5.0
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -886,6 +919,49 @@ button.swiper-pagination-bullet {
           transform: translateY(0);
 }
 
+.reason__box {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 3rem 1rem;
+  border-bottom: 1px solid #005475;
+  background-color: #005475;
+  color: #fff;
+  text-align: center;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  cursor: pointer;
+}
+
+.reason__box:hover {
+  opacity: .9;
+}
+
+.reason__box:hover .reason__title {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+.reason__box--lighten {
+  opacity: .8;
+  background-color: #005475;
+}
+
+.reason__box--lighten:hover {
+  opacity: .9;
+  background-color: #005475;
+  color: #fff;
+}
+
+.reason__title {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  -webkit-transition: -webkit-transform .3s ease;
+  transition: -webkit-transform .3s ease;
+  transition: transform .3s ease;
+  transition: transform .3s ease, -webkit-transform .3s ease;
+}
+
 body {
   min-height: 200vh;
 }
@@ -948,7 +1024,7 @@ body {
     position: absolute;
     width: 0;
     height: 1px;
-    background-color: #E5231B;
+    background-color: #AF1D22;
     -webkit-transition: width .3s ease;
     transition: width .3s ease;
   }
@@ -989,6 +1065,12 @@ body {
 
   .swiper-button-next {
     right: 10px;
+  }
+
+  .reason__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
