@@ -1,13 +1,15 @@
 html {
   font-size: 93.75%;
 
+  scroll-behavior: smooth; 
+
   @include breakpoint(md) {
     font-size: 100%;
   }
 }
 
 body {
-  font-family: $font-primary;
+  font-family: $font-secondary;
 } 
 
 
@@ -15,4 +17,61 @@ a:link,
 a:visited {
   text-decoration: none;
   color: map-get($colors, dark);
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: $font-primary;
+
+  text-transform: uppercase;
+}
+
+.section-heading {
+  display: block;
+
+  margin: 2rem 0;
+
+  color: map-get($colors, primary);
+
+  font-size: 1.6rem;
+  font-weight: 500;
+
+  text-align: center;
+
+  overflow-x: hidden;
+
+  @include breakpoint(sm) {
+    font-size: 2.2rem;
+  }
+
+  span {
+    display: inline-block;
+
+    position: relative;
+
+    padding: 0 .6rem;
+
+    @include breakpoint(sm) {
+      padding: 0 1rem;
+    }
+    
+    &::before,
+    &::after {
+      @include pseudo();
+
+      top: 50%;
+
+      height: 1px;
+      width: 100%;
+
+      background-color: map-get($colors, primary);
+    }
+
+    &::before {
+      left: -100%;
+    }
+
+    &::after {
+      right: -100%;
+    }
+  }
 }

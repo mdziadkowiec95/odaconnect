@@ -1,6 +1,4 @@
-.reason {
-  
-
+.reason { 
   &__container {
     @include breakpoint(sm) {
       display: flex;
@@ -8,9 +6,13 @@
   }
 
   &__box {
+    display: block;
+    
+    position: relative;
+
     flex: 1;
 
-    padding: 3rem 1rem;
+    padding: 3rem 2rem;
 
     border-bottom: 1px solid map-get($colors, primary);
 
@@ -21,13 +23,25 @@
 
     transition: all .3s ease;
 
+    overflow-y: hidden;
+
     cursor: pointer;
 
     &:hover {
      opacity: .9;
 
+     &::before {
+       top: 8px;
+     }
+
       .reason__title {
        transform: translateY(-5px);
+     }
+
+     .reason__description {
+        transform: translateY(3px); 
+
+        color: map-get($colors, white);
      }
     }
 
@@ -43,15 +57,46 @@
         color: map-get($colors, white);
       }
     }
+
+    &::before {
+      @include pseudo();
+      @include triangle(map-get($colors, white), down, 20px);
+
+      top: -15px;
+      left: 50%;
+      
+      transform: translateX(-50%);
+
+      transition: top .3s ease;
+    }
+  }
+
+  &__title,
+  &__description {
+    color: map-get($colors, white);
   }
 
   &__title {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     
     text-transform: uppercase;
 
     transition: transform .3s ease;
+
+    @include breakpoint(sm) {
+      font-size: 1.5rem;
+    }
   }
 
+  &__description {
+    margin-top: .6rem;
 
+    color: darken(map-get($colors, white), 10%);
+
+    font-size: .9rem;
+
+    line-height: 1.45;
+    
+    transition: transform .3s ease, color .3s ease;
+  }
 }

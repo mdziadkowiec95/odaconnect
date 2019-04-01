@@ -117,6 +117,7 @@
  
   &__link {
     @include hardware();
+    
 
     &:link,
     &:visited {
@@ -125,7 +126,8 @@
       padding: 1rem 0;
       
       color: map-get($colors, white);
-
+      
+      font-family: $font-primary;
       font-size: 1.2rem;
 
       text-transform: uppercase;

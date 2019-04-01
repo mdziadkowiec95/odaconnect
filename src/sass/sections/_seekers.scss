@@ -1,0 +1,11 @@
+.seekers {
+    padding: 3rem 0;
+
+    &__description {
+      color: map-get($colors, dark--lighten-2);
+
+      text-align: center;
+
+      font-weight: 700;
+    }
+}
