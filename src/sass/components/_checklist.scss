@@ -1,0 +1,41 @@
+.checklist {
+  padding: 2rem;
+
+  &--reverse {
+    background-color: map-get($colors, primary)
+  }
+ 
+  &__heading {
+    margin-bottom: .5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+
+    &--reverse {
+      color: map-get($colors, white);
+    }
+  }
+
+  &__list {
+
+  }
+
+  &__list-item {
+    position: relative;
+    padding-left: 30px;
+
+    &--reverse {
+      color: map-get($colors, white);
+    }
+
+    &::before {
+      @include pseudo();
+      
+      top: 0;
+      left: 0;
+
+      width: 20px;
+      height: 20px;
+      background: url('../../assets/images/icon-check-reverse.svg') no-repeat center / contain;
+    }
+  }
+}

@@ -9,8 +9,10 @@
 
 @import '../../node_modules/swiper/dist/css/swiper';
 @import 'sections/swiper';
-
+@import 'components/buttons'; 
 @import 'components/slogan';
+@import 'components/checklist';
+@import 'components/register';
 
 @import 'sections/reason';
 @import 'sections/seekers'; 

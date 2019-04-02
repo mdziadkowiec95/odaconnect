@@ -16,13 +16,17 @@ body {
 a:link,
 a:visited {
   text-decoration: none;
-  color: map-get($colors, dark);
+  // color: map-get($colors, dark);
 }
 
 h1, h2, h3, h4, h5 {
   font-family: $font-primary;
 
   text-transform: uppercase;
+}
+
+h1, h2, h3 {
+  color: map-get($colors, primary);
 }
 
 .section-heading {

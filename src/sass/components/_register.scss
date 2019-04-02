@@ -1,0 +1,16 @@
+.register {
+  padding: 2rem;
+  border: 1px solid map-get($colors, primary);
+  // text-align: center;
+
+  &__heading {
+    margin-bottom: .5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  &__btn {
+    margin-top: 2rem;
+    width: 100%;
+  }
+}

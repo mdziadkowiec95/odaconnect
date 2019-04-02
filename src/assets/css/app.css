@@ -9,12 +9,15 @@ body {
 
 a:link,a:visited {
   text-decoration: none;
-  color: #333;
 }
 
 h1,h2,h3,h4,h5 {
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
+}
+
+h1,h2,h3 {
+  color: #005475;
 }
 
 .section-heading {
@@ -906,6 +909,57 @@ button.swiper-pagination-bullet {
   bottom: 22px;
 }
 
+.btn {
+  position: relative;
+  display: inline-block;
+  padding: .8rem 1.8rem;
+  border: solid 1px transparent;
+  -webkit-box-shadow: 0 0 1px #999;
+          box-shadow: 0 0 1px #999;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  -webkit-transition: -webkit-transform .25s ease, -webkit-box-shadow .25s ease;
+  transition: -webkit-transform .25s ease, -webkit-box-shadow .25s ease;
+  transition: transform .25s ease, box-shadow .25s ease;
+  transition: transform .25s ease, box-shadow .25s ease, -webkit-transform .25s ease, -webkit-box-shadow .25s ease;
+  cursor: pointer;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+          perspective: 1000;
+}
+
+.btn:hover {
+  opacity: .8;
+  -webkit-box-shadow: 0 1px 2px #999;
+          box-shadow: 0 1px 2px #999;
+}
+
+.btn--primary {
+  background-color: #005475;
+  -webkit-transition-property: opacity, -webkit-box-shadow;
+  transition-property: opacity, -webkit-box-shadow;
+  transition-property: box-shadow, opacity;
+  transition-property: box-shadow, opacity, -webkit-box-shadow;
+}
+
+.btn--primary::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  background: url("../../assets/images/icon-arrow-right.svg") no-repeat center/contain;
+}
+
 .slogan {
   position: absolute;
   top: 0;
@@ -959,6 +1013,60 @@ button.swiper-pagination-bullet {
   opacity: 1;
   -webkit-transform: translateY(0);
           transform: translateY(0);
+}
+
+.checklist {
+  padding: 2rem;
+}
+
+.checklist--reverse {
+  background-color: #005475;
+}
+
+.checklist__heading {
+  margin-bottom: .5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.checklist__heading--reverse {
+  color: #fff;
+}
+
+.checklist__list-item {
+  position: relative;
+  padding-left: 30px;
+}
+
+.checklist__list-item--reverse {
+  color: #fff;
+}
+
+.checklist__list-item::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: url("../../assets/images/icon-check-reverse.svg") no-repeat center/contain;
+}
+
+.register {
+  padding: 2rem;
+  border: 1px solid #005475;
+}
+
+.register__heading {
+  margin-bottom: .5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.register__btn {
+  margin-top: 2rem;
+  width: 100%;
 }
 
 .reason__box {
@@ -1054,13 +1162,30 @@ button.swiper-pagination-bullet {
 }
 
 .seekers {
+  position: relative;
   padding: 3rem 0;
+}
+
+.seekers__inner {
+  margin-top: 3rem;
 }
 
 .seekers__description {
   color: #686868;
   text-align: center;
   font-weight: 700;
+}
+
+.seekers__checklist {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.seekers__register {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 body {
@@ -1176,6 +1301,18 @@ body {
     right: 10px;
   }
 
+  .btn--primary::after {
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    -webkit-transition: right .3s ease;
+    transition: right .3s ease;
+  }
+
+  .btn--primary:hover::after {
+    right: 10px;
+  }
+
   .reason__container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1184,6 +1321,13 @@ body {
 
   .reason__title {
     font-size: 1.5rem;
+  }
+
+  .seekers__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 4rem;
   }
 }
 
@@ -1203,11 +1347,15 @@ body {
   .slogan__title {
     font-size: 2.7rem;
   }
+
+  .seekers__checklist {
+    margin-right: 2rem;
+  }
 }
 
-@media (min-width: 1300px) {
+@media (min-width: 1230px) {
   .container {
-    max-width: 1270px;
+    max-width: 1200px;
   }
 }
 
