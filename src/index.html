@@ -1,13 +1,17 @@
 <html lang="en">
 
 <head>
+  <meta name="robots" content="noindex,nofollow" />
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Odaconnect - </title>
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Hind:400,600" rel="stylesheet">
+
   <link rel="stylesheet" href="assets/css/app.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+    crossorigin="" />
 </head>
 
 <body>
@@ -24,7 +28,7 @@
 
         <ul class="nav__menu">
           <li class="nav__item">
-            <a href="#" class="nav__link">Praca</a>
+            <a href="#praca" class="nav__link">Praca</a>
           </li>
           <li class="nav__item">
             <a href="#" class="nav__link">Pracodawcy</a>
@@ -77,7 +81,7 @@
   <main>
     <section class="reason">
       <div class="reason__container">
-        <a href="#job-seekers" class="reason__box reason__box--lighten">
+        <a href="#praca" class="reason__box reason__box--lighten">
           <h3 class="reason__title">DLA PRACOWNIKA</h3>
           <p class="reason__description">Szukasz nowych możliwości kariery i chcesz, abyśmy pomogli Ci w tym procesie? Skontaktuj
             się z nami.</p>
@@ -89,7 +93,7 @@
       </div>
     </section>
 
-    <section class="seekers" id="job-seekers">
+    <section class="seekers" id="praca">
       <div class="container">
         <h2 class="section-heading"><span>Praca dla nas</span></h2>
         <p class="seekers__description">
@@ -99,35 +103,82 @@
         </p>
         <div class="seekers__inner">
           <div class="checklist checklist--reverse seekers__checklist">
-            <h3 class="checklist__heading checklist__heading--reverse">Co oferujemy?</h3>
+            <h3 class="checklist__heading">Co oferujemy?</h3>
             <ul class="checklist__list">
-              <li class="checklist__list-item checklist__list-item--reverse">Bardzo konkurencyjne warunki</li>
-              <li class="checklist__list-item checklist__list-item--reverse">Dobre systemy ubezpieczeniowe oraz emerytalne</li>
-              <li class="checklist__list-item checklist__list-item--reverse">Zróżnicowane środowisko pracy</li>
-              <li class="checklist__list-item checklist__list-item--reverse">Możliwość elastycznych godzin pracy</li>
-              <li class="checklist__list-item checklist__list-item--reverse">Kursy i szkolenia</li>
-              <li class="checklist__list-item checklist__list-item--reverse">Możliwość pracy w ekscytującym regionie dla
-                liderów w obszarach specjalistycznych.</li>
+              <li class="checklist__list-item">Bardzo konkurencyjne warunki</li>
+              <li class="checklist__list-item">Dobre systemy ubezpieczeniowe oraz emerytalne</li>
+              <li class="checklist__list-item">Zróżnicowane środowisko pracy</li>
+              <li class="checklist__list-item">Możliwość elastycznych godzin pracy</li>
+              <li class="checklist__list-item">Kursy i szkolenia</li>
+              <li class="checklist__list-item">Możliwość pracy w ekscytującym regionie dla liderów w obszarach specjalistycznych.</li>
             </ul>
           </div>
 
           <div class="register seekers__register">
-            <h3 class="register__heading">Zarejestruj u nas swoje CV</h3>
+            <h3 class="subheading">Zarejestruj u nas swoje CV</h3>
             <p class="register__description">Rekomendujemy wszystkim osobom poszukującym pracy, aby zarejestrowali u nas
               swoje CV. W ten sposób mamy molżliwość kontaktu z Tobą w przypadku kiedy mamy do zaoferowania pracę odpowiadającą
               Twojemu profilowi.</p>
             <a href="#" class="btn btn--primary register__btn">Zarejestruj tutaj CV</a>
           </div>
         </div>
+      </div>
+    </section>
 
+    <section class="employers">
+      <div class="container">
+        <h2 class="section-heading"><span>Pracodawcy</span></h2>
+        <div class="employers__inner">
+          <div class="text-box employers__hiring">
+            <h3 class="subheading text-box__heading">Zatrudnienie</h3>
+            <p class="text-box__description">Contact Oda Connect for the right personnel at the right time. Our personnel
+              solutions are flexible and customised for our customers.
+            </p>
+            <p class="text-box__description">Hiring personnel is useful for temp cover, projects and periods of peak activity.
+              We handle the entire recruitment process, leaving our customers free to focus on their core business.
+            </p>
+            <p class="text-box__description">
+              Oda Connect take full employer responsibility. We hold performance review interviews and personnel management. Candidates
+              are employed by us, and we pay their wages and holiday pay, deduct tax, employer contributions, insurance and
+              pension contributions.
+            </p>
+            <p class="text-box__description">
+              When relevant, we arrange accommodation, travel, work clothes and personal protective equipment.
+            </p>
+          </div>
+
+          <div class="recruitment employers__recruitment">
+            <h3 class="subheading subheading--light reacruitment__heading">Rekrutacja</h3>
+            <p class="recruitment__description">We can help with all or part of the recruitment process for permanent employment
+              positions. Oda Connect ensures quality and profitability via our participation in the recruitment process.
+              We manage a thorough process to find the best candidate for any given vacancy.
+            </p>
+            <div class="checklist employers__checklist">
+              <h4 class="checklist__heading checklist__heading--small checklist__heading--reverse">What we can help with</h4>
+              <ul class="checklist__list">
+                <li class="checklist__list-item">Defining the requirement profile</li>
+                <li class="checklist__list-item">Media plan and advertising</li>
+                <li class="checklist__list-item">Assessment of candidates</li>
+                <li class="checklist__list-item">Interviews</li>
+                <li class="checklist__list-item">Quality assurance</li>
+                <li class="checklist__list-item">Recommendations</li>
+                <li class="checklist__list-item">Follow-up after employment by the customer</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="map">
+      <div id="map">
 
       </div>
-
-
     </section>
   </main>
 
-
+  <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js" integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+    crossorigin=""></script>
   <script src="assets/js/bundle.js"></script>
 </body>
 

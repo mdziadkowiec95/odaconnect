@@ -8,7 +8,10 @@ const { src, dest, series, parallel, watch } = require('gulp'),
   cssnano = require('gulp-cssnano'),
   browsersync = require("browser-sync").create(),
   plumber = require('gulp-plumber'),
+  replace = require('gulp-replace'),
+  htmlmin = require('gulp-htmlmin'),
   newer = require('gulp-newer'),
+  gutil = require('gulp-util'),
   imagemin = require("gulp-imagemin"),
   ftp = require('vinyl-ftp'),
   webpack = require('webpack'),
@@ -98,6 +101,7 @@ function scssLint(cb) {
 function cssMin(cb) {
   src(css.out + '/*.css')
     .pipe(cssnano())
+    .pipe(replace('../../assets/images/', '../images/'))
     .pipe(dest('dist/css'))
 
   cb()
@@ -148,6 +152,15 @@ function html(cb) {
   cb()
 }
 
+function htmlMin(cb) {
+  src('dist/*.html')
+    .pipe(replace('assets/images/', 'images/'))
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(dest(dist))
+
+  cb()
+}
+
 function bSync(cb) {
   browsersync.init(syncOpts)
 
@@ -167,10 +180,10 @@ function copyFiles(cb) {
 /** Configuration **/
 var user = process.env.FTP_USER
 var password = process.env.FTP_PWD
-var host = 'ftp.host-name.vot.pl';
+var host = 'ftp.hrmdrum.vot.pl';
 var port = 21
 var localFilesGlob = ['dist/**/*'];
-var remoteFolder = '/domains/domain-name/public_html';
+var remoteFolder = '/domains/hrmdrum.vot.pl/public_html/odaconnect';
 
 // helper function to build an FTP connection based on our configuration
 function getFtpConnection() {
@@ -203,4 +216,6 @@ function deploy(cb) {
 exports.default = series(styles, scssLint, jsDev, html, bSync, watchFiles);
 exports.build = series(cssMin, images, jsProd, copyFiles);
 exports.upload = series(deploy);
+exports.htmlMin = series(htmlMin);
+exports.cssMin = series(cssMin);
 // exports.test = series(images);

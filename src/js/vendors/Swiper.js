@@ -1,7 +1,9 @@
-import { Swiper, Navigation, Pagination, Autoplay, EffectFade } from 'swiper/dist/js/swiper.esm.js';
+// import { Swiper, Navigation, Pagination, Autoplay, EffectFade } from 'swiper/dist/js/swiper.esm.js';
 
 
-Swiper.use([Navigation, Pagination, Autoplay, EffectFade]);
+// Swiper.use([Navigation, Pagination, Autoplay, EffectFade]);
+
+import Swiper from 'swiper/dist/js/swiper'
 
 const swiper = new Swiper('.swiper-container', {
   // autoplay: {

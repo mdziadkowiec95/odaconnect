@@ -16,7 +16,7 @@ h1,h2,h3,h4,h5 {
   text-transform: uppercase;
 }
 
-h1,h2,h3 {
+h1,h2,h3,h4 {
   color: #005475;
 }
 
@@ -52,6 +52,16 @@ h1,h2,h3 {
 
 .section-heading span::after {
   right: -100%;
+}
+
+.subheading {
+  margin-bottom: .5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.subheading--light {
+  color: #fff;
 }
 
 .container {
@@ -1027,18 +1037,24 @@ button.swiper-pagination-bullet {
   margin-bottom: .5rem;
   font-size: 1.5rem;
   font-weight: 700;
+  color: #fff;
+}
+
+.checklist__heading--small {
+  margin-top: 1rem;
+  font-size: 1rem;
 }
 
 .checklist__heading--reverse {
-  color: #fff;
+  display: inline-block;
+  padding: .2rem .3rem;
+  color: #005475;
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 .checklist__list-item {
   position: relative;
   padding-left: 30px;
-}
-
-.checklist__list-item--reverse {
   color: #fff;
 }
 
@@ -1058,15 +1074,25 @@ button.swiper-pagination-bullet {
   border: 1px solid #005475;
 }
 
-.register__heading {
-  margin-bottom: .5rem;
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-
 .register__btn {
   margin-top: 2rem;
   width: 100%;
+}
+
+.recruitment {
+  padding: 1.5rem;
+  background-color: #005475;
+  color: #fff;
+}
+
+.text-box {
+  padding: 1.5rem;
+  border: 1px solid #005475;
+}
+
+#map {
+  width: 100%;
+  height: 500px;
 }
 
 .reason__box {
@@ -1162,7 +1188,6 @@ button.swiper-pagination-bullet {
 }
 
 .seekers {
-  position: relative;
   padding: 3rem 0;
 }
 
@@ -1186,6 +1211,15 @@ button.swiper-pagination-bullet {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+}
+
+.employers {
+  position: relative;
+  padding: 5rem 0;
+}
+
+.employers__checklist {
+  padding: 0;
 }
 
 body {
@@ -1313,6 +1347,14 @@ body {
     right: 10px;
   }
 
+  .recruitment {
+    padding: 2rem;
+  }
+
+  .text-box {
+    padding: 2rem;
+  }
+
   .reason__container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1328,6 +1370,16 @@ body {
     display: -ms-flexbox;
     display: flex;
     margin-top: 4rem;
+  }
+
+  .employers__hiring,.employers__recruitment {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+
+  .employers__hiring {
+    margin-right: 2rem;
   }
 }
 
@@ -1348,8 +1400,18 @@ body {
     font-size: 2.7rem;
   }
 
+  .seekers {
+    padding: 6rem 0;
+  }
+
   .seekers__checklist {
     margin-right: 2rem;
+  }
+
+  .employers__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 

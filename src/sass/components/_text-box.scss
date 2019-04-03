@@ -1,0 +1,8 @@
+.text-box {
+  padding: 1.5rem;
+  border: 1px solid map-get($colors, primary);
+
+  @include breakpoint(sm) {
+    padding: 2rem;
+  }
+}

@@ -9,13 +9,19 @@
 
 @import '../../node_modules/swiper/dist/css/swiper';
 @import 'sections/swiper';
-@import 'components/buttons'; 
+@import 'components/buttons';  
 @import 'components/slogan';
 @import 'components/checklist';
 @import 'components/register';
-
+@import 'components/recruitment';
+@import 'components/text-box';
+@import 'components/map';
+ 
 @import 'sections/reason';
 @import 'sections/seekers'; 
+@import 'sections/employers';
+
+// @import '../../node_modules/leaflet/dist/leaflet.css';
 
 body {
   min-height: 200vh;

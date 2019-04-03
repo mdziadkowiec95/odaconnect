@@ -1,0 +1,9 @@
+.recruitment {
+  padding: 1.5rem;
+  background-color: map-get($colors, primary);
+  color: map-get($colors, white);
+
+  @include breakpoint(sm) {
+    padding: 2rem;
+  }
+}

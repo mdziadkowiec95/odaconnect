@@ -1,0 +1,39 @@
+.employers {
+  position: relative;
+  padding: 5rem 0;
+
+
+  // &::before {
+  //   @include pseudo();
+
+  //   top: 0;
+  //   right: 0;
+  //   width: 50%;
+  //   height: 100%;
+
+  //   background-color: map-get($colors, primary);
+  // }
+
+  &__inner {
+    @include breakpoint(md) {
+      display: flex;
+    }
+  }
+
+  &__hiring,
+  &__recruitment {
+    @include breakpoint(sm) {
+      flex: 1;
+    }
+  }
+
+  &__hiring {
+    @include breakpoint(sm) {
+      margin-right: 2rem;
+    }
+  }
+
+  &__checklist {
+    padding: 0;
+  }
+}

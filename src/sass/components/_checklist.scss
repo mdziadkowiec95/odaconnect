@@ -9,9 +9,18 @@
     margin-bottom: .5rem;
     font-size: 1.5rem;
     font-weight: 700;
+    color: map-get($colors, white);
+
+    &--small {
+      margin-top: 1rem;
+      font-size: 1rem;
+    }
 
     &--reverse {
-      color: map-get($colors, white);
+      display: inline-block;
+      padding: .2rem .3rem;
+      color: map-get($colors, primary);
+      background-color: rgba(map-get($colors, white), .9);
     }
   }
 
@@ -22,10 +31,7 @@
   &__list-item {
     position: relative;
     padding-left: 30px;
-
-    &--reverse {
-      color: map-get($colors, white);
-    }
+    color: map-get($colors, white);
 
     &::before {
       @include pseudo();
@@ -36,6 +42,6 @@
       width: 20px;
       height: 20px;
       background: url('../../assets/images/icon-check-reverse.svg') no-repeat center / contain;
-    }
+    }   
   }
 }
