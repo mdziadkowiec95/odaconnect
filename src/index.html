@@ -8,8 +8,9 @@
   <title>Odaconnect - </title>
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Hind:400,600" rel="stylesheet">
-
+  <!-- build:css css/app.css -->
   <link rel="stylesheet" href="assets/css/app.css">
+  <!-- endbuild -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
     crossorigin="" />
 </head>
@@ -34,13 +35,13 @@
             <a href="#praca" class="nav__link">Praca</a>
           </li>
           <li class="nav__item">
-            <a href="#" class="nav__link">Pracodawcy</a>
+            <a href="#pracodawcy" class="nav__link">Pracodawcy</a>
           </li>
           <li class="nav__item">
             <a href="#" class="nav__link">O nas</a>
           </li>
           <li class="nav__item">
-            <a href="#" class="nav__link">Sektory</a>
+            <a href="#sektory" class="nav__link">Sektory</a>
           </li>
           <li class="nav__item">
             <a href="#" class="nav__link">Kontakt</a>
@@ -128,7 +129,7 @@
       </div>
     </section>
 
-    <section class="employers">
+    <section class="employers" id="pracodawcy">
       <div class="container">
         <h2 class="section-heading"><span>Pracodawcy</span></h2>
         <div class="employers__inner">
@@ -173,13 +174,13 @@
       </div>
     </section>
 
-    <section class="sectors">
+    <section class="sectors" id="sektory">
       <div class="container">
         <h2 class="section-heading"><span>Sektory</span></h2>
         <div class="sectors__grid">
           <div class="sector sector--construction">
             <div class="sector__body">
-              <h3 class="sector__name">CONSTRUCTION</h3>
+              <h3 class="sector__name">Budownictwo</h3>
               <div class="sector__content">
                 <p class="sector__description">We supply personnel for all types of building projects. Our customers vary
                   from large, national contractors to small local building companies.
@@ -207,7 +208,7 @@
 
           <div class="sector sector--healthcare">
             <div class="sector__body">
-              <h3 class="sector__name">Healthcare</h3>
+              <h3 class="sector__name">Opieka medyczna</h3>
               <div class="sector__content">
                 <p class="sector__description">We supply personnel for all types of building projects. Our customers vary
                   from large, national contractors to small local building companies.
@@ -221,7 +222,7 @@
 
           <div class="sector sector--electrical">
             <div class="sector__body">
-              <h3 class="sector__name">Electrical and mechanical</h3>
+              <h3 class="sector__name">Elektryczny | Mechaniczny</h3>
               <div class="sector__content">
                 <p class="sector__description">We supply personnel for all types of building projects. Our customers vary
                   from large, national contractors to small local building companies.
@@ -235,7 +236,7 @@
 
           <div class="sector sector--other">
             <div class="sector__body">
-              <h3 class="sector__name">Other skills areas</h3>
+              <h3 class="sector__name">Inne obszary umiejętności</h3>
               <div class="sector__content">
                 <p class="sector__description">We supply personnel for all types of building projects. Our customers vary
                   from large, national contractors to small local building companies.
@@ -249,17 +250,19 @@
         </div>
       </div>
     </section>
-    <!-- 
+
     <section class="map">
       <div id="map">
 
       </div>
-    </section> -->
+    </section>
   </main>
 
   <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js" integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
     crossorigin=""></script>
+  <!-- build:js js/bundle.js -->
   <script src="assets/js/bundle.js"></script>
+  <!-- endbuild -->
 </body>
 
 

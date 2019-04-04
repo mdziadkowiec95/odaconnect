@@ -104,7 +104,7 @@ eval("/**\n * Swiper 4.5.0\n * Most modern mobile touch slider and framework wit
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("// import L from 'leaflet'\nvar map = L.map('map').setView([51.505, -0.09], 13);\nL.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {\n  attribution: '&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors'\n}).addTo(map);\nL.marker([51.5, -0.09]).addTo(map).bindPopup('A pretty CSS3 popup.<br> Easily customizable.').openPopup();\n\n//# sourceURL=webpack:///./src/js/components/Map.js?");
+eval("// import L from 'leaflet'\nvar odaconnectPLlonLat = [49.9656593, 20.6081992];\nvar map = L.map('map').setView(odaconnectPLlonLat, 16);\nL.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {\n  attribution: '&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors'\n}).addTo(map);\nL.marker(odaconnectPLlonLat).addTo(map).bindPopup('Brzesko, ul. Rzeźnicza 5').openPopup();\n\n//# sourceURL=webpack:///./src/js/components/Map.js?");
 
 /***/ }),
 

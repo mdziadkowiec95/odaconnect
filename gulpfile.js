@@ -1,5 +1,6 @@
 const { src, dest, series, parallel, watch } = require('gulp'),
   del = require('del'),
+  dotenv = require('dotenv').config(),
   sass = require('gulp-sass'),
   combineMq = require('gulp-combine-mq'),
   scsslint = require('gulp-scss-lint'),
@@ -8,6 +9,7 @@ const { src, dest, series, parallel, watch } = require('gulp'),
   cssnano = require('gulp-cssnano'),
   browsersync = require("browser-sync").create(),
   plumber = require('gulp-plumber'),
+  useref = require('gulp-useref'),
   replace = require('gulp-replace'),
   htmlmin = require('gulp-htmlmin'),
   newer = require('gulp-newer'),
@@ -129,7 +131,7 @@ function images(cb) {
     .pipe(
       imagemin([
         imagemin.gifsicle({ interlaced: true }),
-        imagemin.jpegtran({ progressive: true }),
+        imagemin.jpegtran({ progressive: false }),
         imagemin.optipng({ optimizationLevel: 5 }),
         imagemin.svgo({
           plugins: [
@@ -171,6 +173,7 @@ function copyFiles(cb) {
   const html = 'src/**/*.html';
 
   src([html], { base: 'src', })
+    .pipe(useref())
     .pipe(dest('dist'))
 
   cb()
@@ -214,8 +217,9 @@ function deploy(cb) {
 };
 
 exports.default = series(styles, scssLint, jsDev, html, bSync, watchFiles);
-exports.build = series(cssMin, images, jsProd, copyFiles);
+exports.build = series(copyFiles, cssMin, images, jsProd);
 exports.upload = series(deploy);
 exports.htmlMin = series(htmlMin);
 exports.cssMin = series(cssMin);
+exports.img = series(images);
 // exports.test = series(images);
