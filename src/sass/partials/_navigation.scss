@@ -8,6 +8,7 @@
   z-index: map-get($layers, nav);
 
   background-color: map-get($colors, white);
+  box-shadow: 0 0 7px rgba(map-get($colors, dark), 0.6);
 
   &--scrolled {
     .nav-toggler {

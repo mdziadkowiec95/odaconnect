@@ -708,6 +708,8 @@ img {
   width: 100%;
   z-index: 200;
   background-color: #fff;
+  -webkit-box-shadow: 0 0 7px rgba(51, 51, 51, 0.6);
+          box-shadow: 0 0 7px rgba(51, 51, 51, 0.6);
 }
 
 .nav--scrolled .nav-toggler {
@@ -917,6 +919,7 @@ img {
 
 .footer__social-icon {
   width: 40px;
+  height: 40px;
   fill: #fff;
   -webkit-transition: fill .3s, background-color .3s;
   transition: fill .3s, background-color .3s;

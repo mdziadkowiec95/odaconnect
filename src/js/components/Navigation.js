@@ -4,9 +4,6 @@ const navToggler = document.querySelector('.nav-toggler');
 const nav = document.querySelector('.nav');
 const navMenu = document.querySelector('.nav__menu');
 
-
-
-
 document.querySelector('.header').addEventListener('click', (e) => {
   if (e.target.matches('.nav-toggler, .nav-toggler *')) {
     e.preventDefault();

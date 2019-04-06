@@ -48,6 +48,7 @@
 
   &__social-icon {
     width: 40px;
+    height: 40px;
     fill: map-get($colors, white);
     transition: fill .3s, background-color .3s;
   }
