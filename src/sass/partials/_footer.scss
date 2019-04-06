@@ -1,0 +1,71 @@
+.footer {
+  padding: 2rem 0 1rem 0;
+  background-color: darken(map-get($colors, primary), 5%);
+  color: map-get($colors, white);
+  text-align: center;
+
+  &__brand {
+    margin-bottom: .3rem;
+    font-size: 2rem;
+  }
+
+  &__address {
+
+  }
+
+  &__contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1rem;
+
+    .contact-detail {
+      margin: 0 .5rem;
+    }
+  }
+
+  &__socials {
+    margin: 1rem 0 1.5rem 0;
+  }
+
+  &__social-link {
+    margin: 0 .3rem;
+
+    &:hover {
+      .footer__social-icon {
+        background: map-get($colors, white);
+
+        &--fb {
+          fill: map-get($colors, facebook);
+        }
+
+        &--ld {
+          fill: map-get($colors, linkedin);
+        }
+      }
+    }
+  }
+
+  &__social-icon {
+    width: 40px;
+    fill: map-get($colors, white);
+    transition: fill .3s, background-color .3s;
+  }
+
+  &__copyright {
+    color: darken(map-get($colors, white), 30%);
+    font-size: .9rem;
+    
+    a {
+      &:link,
+      &:visited {
+        color: map-get($colors, white);
+        transition: color .3s;
+      }
+
+      &:hover {
+        color: map-get($colors, accent);
+      }
+    }
+  }
+} 

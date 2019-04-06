@@ -1,3 +1,5 @@
+@import '../../node_modules/swiper/dist/css/swiper';
+
 @import 'utils/variables';
 @import 'utils/mixins';
 @import 'base/typography';
@@ -6,9 +8,10 @@
 @import 'utils/helpers';
 
 @import 'partials/navigation';
+@import 'partials/footer';
 
-@import '../../node_modules/swiper/dist/css/swiper';
-@import 'sections/swiper';
+
+
 @import 'components/buttons';  
 @import 'components/slogan';
 @import 'components/checklist';
@@ -16,9 +19,11 @@
 @import 'components/recruitment';
 @import 'components/text-box';
 @import 'components/sector';
+@import 'components/contact-detail';
 @import 'components/team-member';
 @import 'components/map';
- 
+
+@import 'sections/swiper';
 @import 'sections/reason';
 @import 'sections/seekers'; 
 @import 'sections/employers';

@@ -36,10 +36,12 @@
   }
 
   &__brand {
+    @include hardware();
+
     transition: opacity .3s ease;
 
     &:hover {
-      opacity: .8;
+      opacity: .8; 
     }
   }
 

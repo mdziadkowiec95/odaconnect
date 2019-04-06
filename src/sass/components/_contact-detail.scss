@@ -1,0 +1,50 @@
+.contact-detail {
+  display: flex;
+  text-align: left;
+  margin-left: .1rem;
+  margin-bottom: .3rem;
+
+  &:hover {
+    .contact-detail__icon {
+      fill: map-get($colors, accent);
+      transform: rotate(360deg);
+    }
+
+    .contact-detail__value {
+      color: map-get($colors, primary);
+    }
+  }
+
+  &--light {
+    &:link,
+    &:visited {
+      color: map-get($colors, white);
+    }
+
+    .contact-detail__icon {
+      fill: map-get($colors, white);
+    }
+     
+    &:hover {
+      .contact-detail__value {
+        color: rgba(map-get($colors, white), .7);
+      }
+    }
+  }
+
+  &__icon {
+    align-self: center;
+    margin-bottom: .2rem;
+    margin-right: .4rem;
+    fill: map-get($colors, primary);
+    transition: transform .3s, fill .3s;
+
+   
+  }
+
+  &__value {
+    font-size: 1rem;
+    white-space: nowrap;
+    transition: color .2s .1s;
+  }
+}

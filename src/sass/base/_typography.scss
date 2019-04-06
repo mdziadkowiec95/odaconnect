@@ -47,6 +47,8 @@ h1, h2, h3, h4 {
     font-size: 2.2rem;
   }
 
+ 
+
   span {
     display: inline-block;
 
@@ -76,6 +78,17 @@ h1, h2, h3, h4 {
 
     &::after {
       right: -100%;
+    }
+  }
+
+  &--light {
+    color: map-get($colors, white);
+
+    span {
+      &::before,
+      &::after {
+        background-color: map-get($colors, white);
+      }
     }
   }
 }

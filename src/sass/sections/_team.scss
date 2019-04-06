@@ -1,9 +1,13 @@
 .team {
   &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+
     @include breakpoint(sm) {
-      display: flex;
-      justify-content: space-between;
-      padding-top: 2rem; 
+     
+      padding-top: 2rem;  
     }
   }
 
@@ -12,5 +16,19 @@
     color: map-get($colors, dark--lighten-2);
     text-align: center;
     font-weight: 700;
+  }
+
+  .team-member {
+    flex: 1 1 250px;
+
+    @include breakpoint(sm) {
+      flex: 1 1 300px;
+      margin: .3rem;
+    }
+
+    @include breakpoint(md) {
+      flex: 1;
+      margin: 0 .5rem;
+    }
   }
 } 

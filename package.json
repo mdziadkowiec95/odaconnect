@@ -37,6 +37,7 @@
     "webpack-stream": "^5.2.1"
   },
   "dependencies": {
-    "leaflet": "^1.4.0"
+    "leaflet": "^1.4.0",
+    "smoothscroll-polyfill": "^0.4.4"
   }
 }

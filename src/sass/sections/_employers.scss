@@ -28,7 +28,7 @@
   }
 
   &__hiring {
-    @include breakpoint(sm) {
+    @include breakpoint(md) {
       margin-right: 2rem;
     }
   }

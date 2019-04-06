@@ -1,9 +1,14 @@
 
 .map-section {
-  padding: 4rem 0;
+  padding-top: 7rem
 }
 
 .map {
+  z-index: 0;
   width: 100%;
-  height: 400px; 
+  height: 300px;
+ 
+  @include breakpoint(sm) {
+    height: 400px;
+  }
 }

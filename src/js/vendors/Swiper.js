@@ -6,9 +6,9 @@
 import Swiper from 'swiper/dist/js/swiper'
 
 const swiper = new Swiper('.swiper-container', {
-  // autoplay: {
-  //   delay: 5000,
-  // },
+  autoplay: {
+    delay: 5000,
+  },
   effect: 'fade',
   pagination: {
     el: '.swiper-pagination',
