@@ -1,0 +1,98 @@
+.team-member {
+  position: relative;
+  padding: 1rem;
+  // max-width: 220px
+  box-shadow: 0 0 3px rgba(map-get($colors, dark), .4);
+  text-align: center;
+  transition: box-shadow .3s;
+
+  @include breakpoint(md) {
+     cursor: pointer;
+
+     &::before {
+      @include pseudo();
+
+      top: -2px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 2px;
+      opacity: 0;
+      background-color: map-get($colors, primary);
+      transition: width .3s, opacity .3s;
+
+      
+    }
+
+    &:hover {
+      box-shadow: 0 0 4px rgba(map-get($colors, dark), .6);
+
+      .team-member__image {
+        opacity: .8;
+      }
+      &::before {
+        opacity: 1;
+        width: 100%;
+      }
+    }
+  }
+
+  &__image {
+    transition: opacity .3s;
+  }
+ 
+
+  &__name {
+    margin-top: .5rem;
+    color: map-get($colors, dark--lighten);
+    font-weight: 700;
+  }
+
+  &__role {
+    position: relative;
+    margin-bottom: 1.7rem;
+    color: lighten(map-get($colors, dark--lighten), 10%);
+
+    &::after {
+      @include pseudo();
+
+      bottom: -0.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 30px;
+      height: 3px;
+      background-color: rgba(map-get($colors, accent), .75);
+    }
+  }
+
+  &__contact {
+    display: flex;
+    text-align: left;
+    margin-left: .1rem;
+    margin-bottom: .3rem;
+
+    &:hover {
+      .team-member__icon {
+        fill: map-get($colors, accent);
+        transform: rotate(360deg);
+      }
+
+      .team-member__contact-detail {
+        color: map-get($colors, primary);
+      }
+    }
+  }
+
+  &__icon {
+    align-self: center;
+    margin-bottom: .2rem;
+    margin-right: .4rem;
+    fill: map-get($colors, primary);
+    transition: transform .3s, fill .3s;
+  }
+
+  &__contact-detail {
+    font-size: 1rem;
+    transition: color .2s .1s;
+  }
+}

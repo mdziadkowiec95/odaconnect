@@ -41,6 +41,7 @@
   &::after {
     @include breakpoint(md) {
       background-color: rgba(map-get($colors, primary), .7);
+      background-color: rgba(20, 57, 72, 0.7);
       z-index: 1;
       transition: background-color .3s ease;
     }
@@ -50,7 +51,7 @@
   &.visible {
     @include breakpoint(md) {
       &::after {
-        background-color: rgba(map-get($colors, primary), 1);
+        background-color: rgba(map-get($colors, primary), .95);
       }
   
       .sector__body,

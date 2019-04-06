@@ -16,7 +16,7 @@ body {
 a:link,
 a:visited {
   text-decoration: none;
-  // color: map-get($colors, dark);
+  color: map-get($colors, dark--lighten);
 }
 
 h1, h2, h3, h4, h5 {
