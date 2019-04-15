@@ -45,16 +45,18 @@
         right: 20px;
         width: 20px;
         height: 20px;
-        transition: right .3s ease; 
+        animation: cta-arrow-move 2s infinite; 
+        animation-play-state: pause;
+        transition: right .3s ease;
       }
     }
 
     &:hover {
-      &::after {
-        @include breakpoint(sm) {
-          right: 10px;
-        }
-      }
+      // &::after {
+      //   @include breakpoint(sm) {
+      //     right: 10px;
+      //   }
+      // }
     }
   }
 } 

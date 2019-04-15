@@ -178,7 +178,8 @@
     }
 
     &:active,
-    &:hover {
+    &:hover,
+    &.active { 
       background-color: map-get($colors, white);
       color: map-get($colors, dark--lighten); 
       

@@ -8,5 +8,4 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 L.marker(odaconnectPLlonLat).addTo(map)
-  .bindPopup('Brzesko, ul. Rzeźnicza 5')
-  .openPopup(); 
+  .bindPopup('ul. Rzeźnicza 5, 32-800 Brzesko, Poland')

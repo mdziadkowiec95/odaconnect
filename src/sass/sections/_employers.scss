@@ -1,18 +1,6 @@
 .employers {
   position: relative;
-  padding: 5rem 0;
-
-
-  // &::before {
-  //   @include pseudo();
-
-  //   top: 0;
-  //   right: 0;
-  //   width: 50%;
-  //   height: 100%;
-
-  //   background-color: map-get($colors, primary);
-  // }
+  padding: 3rem 0;
 
   &__inner {
     @include breakpoint(md) {

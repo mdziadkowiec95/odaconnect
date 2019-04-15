@@ -1,5 +1,3 @@
-
-
 const navToggler = document.querySelector('.nav-toggler');
 const nav = document.querySelector('.nav');
 const navMenu = document.querySelector('.nav__menu');
@@ -19,7 +17,7 @@ document.querySelector('.header').addEventListener('click', (e) => {
 
     navToggler.classList.remove('is-open');
     navMenu.classList.remove('collapsed');
-  } 
+  }
 });
 
 

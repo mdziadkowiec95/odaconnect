@@ -31,6 +31,7 @@
   &__list-item {
     position: relative;
     padding-left: 30px;
+    margin-bottom: .25em;
     color: map-get($colors, white);
 
     &::before {

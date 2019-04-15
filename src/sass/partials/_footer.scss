@@ -1,12 +1,16 @@
 .footer {
-  padding: 2rem 0 1rem 0;
+  padding-top: 2rem;
   background-color: darken(map-get($colors, primary), 5%);
   color: map-get($colors, white);
   text-align: center;
 
   &__brand {
     margin-bottom: .3rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
+
+    @include breakpoint(sm) {
+      font-size: 2rem;
+    }
   }
 
   &__address {
@@ -53,6 +57,21 @@
     transition: fill .3s, background-color .3s;
   }
 
+  &__terms {
+    margin-bottom: .5rem;
+  }
+
+  &__terms-link {
+    &:link, &:visited {
+      padding: 0 .4rem;
+      color: map-get($colors, white);
+      font-size: .8rem;
+
+      &:first-child {
+      }
+    }
+  }
+
   &__copyright {
     color: darken(map-get($colors, white), 30%);
     font-size: .9rem;
@@ -68,5 +87,15 @@
         color: map-get($colors, accent);
       }
     }
+  }
+
+  &__bottom-bar {
+    padding: .5rem;
+    background-color: darken(map-get($colors, primary), 8%);
+  }
+
+  &__info {
+    color: darken(map-get($colors, white), 12%);
+    font-size: .7rem;  
   }
 } 

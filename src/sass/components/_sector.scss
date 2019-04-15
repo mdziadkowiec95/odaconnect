@@ -2,7 +2,7 @@
   position: relative;
   overflow: hidden;
   // width: 300px;
-  padding: 1.5rem;
+  padding: 2rem 1.5rem 1.5rem;
 
   background: map-get($colors, primary) no-repeat center;
 
@@ -10,15 +10,18 @@
 
   border-bottom: 1px solid map-get($colors, white);
 
-  cursor: pointer;
-
   @include breakpoint(sm) {
+   
     border: 1px solid map-get($colors, white);
   }
 
   @include breakpoint(md) {
+    min-height: 200px;
+    height: 100%;
     border: 0;
+    cursor: pointer;
   }
+  
 
   &::before,
   &::after {
@@ -35,6 +38,7 @@
   &::before {
     @include breakpoint(md) {
       background: map-get($colors, primary) no-repeat center / cover;
+      transition: transform .3s;
     }
   }
 
@@ -50,6 +54,9 @@
   &:hover,
   &.visible {
     @include breakpoint(md) {
+      &::before {
+        transform: scale(1.1);
+      }
       &::after {
         background-color: rgba(map-get($colors, primary), .95);
       }
@@ -133,12 +140,15 @@
   }
 
   &__body {
+    // display: flex;
+    
     text-align: center;
 
     @include breakpoint(md) {
       position: relative;
       z-index: 2;
-      transform: translateY(50%);
+      height: 100%;
+      transform: translateY(45%);
       transition: transform .3s ease;
     }
   }

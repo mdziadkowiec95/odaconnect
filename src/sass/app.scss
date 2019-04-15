@@ -2,6 +2,7 @@
 
 @import 'utils/variables';
 @import 'utils/mixins';
+@import 'utils/animations';
 @import 'base/typography';
 @import 'base/base';
 @import 'base/reset';
@@ -20,7 +21,7 @@
 @import 'components/text-box';
 @import 'components/sector';
 @import 'components/contact-detail';
-@import 'components/team-member';
+// @import 'components/team-member';
 @import 'components/map';
 
 @import 'sections/swiper';

@@ -209,9 +209,8 @@ function getFtpConnection() {
 function deploy(cb) {
   var conn = getFtpConnection()
 
-
   src(localFilesGlob, { base: './dist', buffer: false })
-    .pipe(conn.newer(remoteFolder)) // only upload newer files
+    // .pipe(conn.newer(remoteFolder)) // only upload newer files
     .pipe(conn.dest(remoteFolder))
   cb()
 };
