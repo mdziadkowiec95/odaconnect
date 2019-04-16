@@ -52,7 +52,10 @@ const img = {
 // BrowserSync settings
 const syncOpts = {
   server: {
-    baseDir: source
+    baseDir: source,
+    serveStaticOptions: {
+      extensions: ['html']
+    }
     // index: "index.html"
   },
   open: true,

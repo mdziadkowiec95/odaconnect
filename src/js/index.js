@@ -3,6 +3,7 @@ import smoothscroll from 'smoothscroll-polyfill';
 // kick off the polyfill!
 smoothscroll.polyfill();
 
+import './base/checkTouchDevice';
 import './components/Navigation';
 import './vendors/Swiper';
 import './components/Map';
@@ -28,7 +29,7 @@ import './components/Map';
 
   function isBelowScroll(element) {
     var position = element.getBoundingClientRect();
-    return position.top >= -100;
+    return position.top > 0;
   }
 
   function selectLink(id) {
@@ -37,7 +38,9 @@ import './components/Map';
       element.classList.remove('active');
     });
 
-    document.querySelector('a[href="#' + id + '"]').classList.add('active');
+    if (sections[0].getBoundingClientRect().top < window.innerHeight + 200) {
+      document.querySelector('a[href="#' + id + '"]').classList.add('active');
+    }
   }
 
   window.addEventListener('scroll', function (event) {

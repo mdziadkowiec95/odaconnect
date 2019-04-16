@@ -23,15 +23,21 @@
 
     transition: all .3s ease;
 
-    overflow-y: hidden;
+    overflow: hidden;
 
     cursor: pointer;
 
-    &:hover {
+    &:hover,
+    &:active {
      opacity: .9;
 
      &::before {
        top: 8px;
+     }
+
+     &::after {
+       transform: scale(1);
+      //  width: 100%;
      }
 
       .reason__title {
@@ -58,8 +64,11 @@
       }
     }
 
-    &::before {
+    &::before, &::after {
       @include pseudo();
+    }
+
+    &::before {
       @include triangle(map-get($colors, white), down, 20px);
 
       top: -15px;
@@ -68,6 +77,19 @@
       transform: translateX(-50%);
 
       transition: top .3s ease;
+    }
+
+    &::after {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+
+      transform: scale(0.01);
+
+      background-color: map-get($colors, white);
+
+      transition: transform .3s;
     }
   }
 

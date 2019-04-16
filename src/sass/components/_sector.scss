@@ -47,14 +47,16 @@
       background-color: rgba(map-get($colors, primary), .7);
       background-color: rgba(20, 57, 72, 0.7);
       z-index: 1;
-      transition: background-color .3s ease;
+      transition: background-color .4s ease;
     }
   }
 
   &:hover,
-  &.visible {
+  &:active {
     @include breakpoint(md) {
       &::before {
+        
+        
         transform: scale(1.1);
       }
       &::after {
@@ -107,7 +109,7 @@
     
     @include breakpoint(md) {
       &::before { 
-        background-image: url('../../assets/images/sectors-healthcare.jpeg');
+        background-image: url('../../assets/images/slider-6.jpg');
       }
     }
   }
@@ -120,7 +122,8 @@
 
     @include breakpoint(md) {
       &::before { 
-        background-image: url('../../assets/images/sectors-electrical.jpeg');
+
+        background-image: url('../../assets/images/sectors-healthcare.jpeg');
       }
     }
   }
@@ -139,9 +142,7 @@
     }
   }
 
-  &__body {
-    // display: flex;
-    
+  &__body {    
     text-align: center;
 
     @include breakpoint(md) {
@@ -149,7 +150,8 @@
       z-index: 2;
       height: 100%;
       transform: translateY(45%);
-      transition: transform .3s ease;
+      will-change: transform;
+      transition: transform .3s;
     }
   }
 
@@ -170,3 +172,4 @@
    
   }
 }
+

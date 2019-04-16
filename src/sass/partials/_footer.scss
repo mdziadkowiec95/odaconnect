@@ -66,13 +66,19 @@
       padding: 0 .4rem;
       color: map-get($colors, white);
       font-size: .8rem;
+      transition: opacity .3s;
 
       &:first-child {
       }
     }
+
+    &:hover {
+      opacity: .8;
+    }
   }
 
   &__copyright {
+    margin: .5rem 0;
     color: darken(map-get($colors, white), 30%);
     font-size: .9rem;
     
@@ -97,5 +103,9 @@
   &__info {
     color: darken(map-get($colors, white), 12%);
     font-size: .7rem;  
+  }
+
+  &__copartnership {
+    color: darken(map-get($colors, white), 10%);
   }
 } 

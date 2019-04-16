@@ -937,9 +937,16 @@ img {
   padding: 0 .4rem;
   color: #fff;
   font-size: .8rem;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+}
+
+.footer__terms-link:hover {
+  opacity: .8;
 }
 
 .footer__copyright {
+  margin: .5rem 0;
   color: #b3b3b3;
   font-size: .9rem;
 }
@@ -962,6 +969,10 @@ img {
 .footer__info {
   color: #e0e0e0;
   font-size: .7rem;
+}
+
+.footer__copartnership {
+  color: #e6e6e6;
 }
 
 .btn {
@@ -1011,12 +1022,16 @@ img {
   display: block;
   position: absolute;
   top: 50%;
-  right: 10px;
+  right: 12px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   width: 15px;
   height: 15px;
   background: url("../../assets/images/icon-arrow-right.svg") no-repeat center/contain;
+  -webkit-animation: cta-arrow-move 2s infinite;
+          animation: cta-arrow-move 2s infinite;
+  -webkit-animation-play-state: pause;
+          animation-play-state: pause;
 }
 
 .slogan {
@@ -1301,24 +1316,29 @@ img {
   text-align: center;
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
-  overflow-y: hidden;
+  overflow: hidden;
   cursor: pointer;
 }
 
-.reason__box:hover {
+.reason__box:hover,.reason__box:active {
   opacity: .9;
 }
 
-.reason__box:hover::before {
+.reason__box:hover::before,.reason__box:active::before {
   top: 8px;
 }
 
-.reason__box:hover .reason__title {
+.reason__box:hover::after,.reason__box:active::after {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.reason__box:hover .reason__title,.reason__box:active .reason__title {
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
 }
 
-.reason__box:hover .reason__description {
+.reason__box:hover .reason__description,.reason__box:active .reason__description {
   -webkit-transform: translateY(3px);
           transform: translateY(3px);
   color: #fff;
@@ -1335,10 +1355,13 @@ img {
   color: #fff;
 }
 
-.reason__box::before {
+.reason__box::before,.reason__box::after {
   content: "";
   display: block;
   position: absolute;
+}
+
+.reason__box::before {
   content: "";
   display: block;
   position: absolute;
@@ -1354,6 +1377,20 @@ img {
           transform: translateX(-50%);
   -webkit-transition: top .3s ease;
   transition: top .3s ease;
+}
+
+.reason__box::after {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  -webkit-transform: scale(0.01);
+          transform: scale(0.01);
+  background-color: #fff;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
 }
 
 .reason__title,.reason__description {
@@ -1545,12 +1582,8 @@ body {
     right: 20px;
     width: 20px;
     height: 20px;
-    -webkit-animation: cta-arrow-move 2s infinite;
-            animation: cta-arrow-move 2s infinite;
-    -webkit-animation-play-state: pause;
-            animation-play-state: pause;
-    -webkit-transition: right .3s ease;
-    transition: right .3s ease;
+    -webkit-transition: right .3s;
+    transition: right .3s;
   }
 
   .recruitment {
@@ -1705,25 +1738,25 @@ body {
     background-color: rgba(0, 84, 117, 0.7);
     background-color: rgba(20, 57, 72, 0.7);
     z-index: 1;
-    -webkit-transition: background-color .3s ease;
-    transition: background-color .3s ease;
+    -webkit-transition: background-color .4s ease;
+    transition: background-color .4s ease;
   }
 
-  .sector:hover::before,.sector.visible::before {
+  .sector:hover::before,.sector:active::before {
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
   }
 
-  .sector:hover::after,.sector.visible::after {
+  .sector:hover::after,.sector:active::after {
     background-color: rgba(0, 84, 117, 0.95);
   }
 
-  .sector:hover .sector__body,.sector:hover .sector__content,.sector.visible .sector__body,.sector.visible .sector__content {
+  .sector:hover .sector__body,.sector:hover .sector__content,.sector:active .sector__body,.sector:active .sector__content {
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
 
-  .sector:hover .sector__content,.sector.visible .sector__content {
+  .sector:hover .sector__content,.sector:active .sector__content {
     opacity: 1;
   }
 
@@ -1736,11 +1769,11 @@ body {
   }
 
   .sector--healthcare::before {
-    background-image: url("../../assets/images/sectors-healthcare.jpeg");
+    background-image: url("../../assets/images/slider-6.jpg");
   }
 
   .sector--electrical::before {
-    background-image: url("../../assets/images/sectors-electrical.jpeg");
+    background-image: url("../../assets/images/sectors-healthcare.jpeg");
   }
 
   .sector--other {
@@ -1757,10 +1790,11 @@ body {
     height: 100%;
     -webkit-transform: translateY(45%);
             transform: translateY(45%);
-    -webkit-transition: -webkit-transform .3s ease;
-    transition: -webkit-transform .3s ease;
-    transition: transform .3s ease;
-    transition: transform .3s ease, -webkit-transform .3s ease;
+    will-change: transform;
+    -webkit-transition: -webkit-transform .3s;
+    transition: -webkit-transform .3s;
+    transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s;
   }
 
   .sector__content {
