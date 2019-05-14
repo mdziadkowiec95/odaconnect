@@ -1,3 +1,13 @@
 .is-blocked {
   overflow: hidden;
 }
+
+.d-none {
+  display: none;
+}
+
+.d-lg-block {
+  @include breakpoint(lg) {
+    display: block;
+  }
+}

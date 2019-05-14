@@ -183,13 +183,22 @@ function copyFiles(cb) {
 }
 
 
-/** Configuration **/
-var user = process.env.FTP_USER
-var password = process.env.FTP_PWD
-var host = 'ftp.hrmdrum.vot.pl';
+/** Configuration DEV **/
+// var user = process.env.FTP_USER
+// var password = process.env.FTP_PWD
+// var remoteFolder = '/domains/hrmdrum.vot.pl/public_html/odaconnect';
+// var host = 'ftp.hrmdrum.vot.pl';
+
+
+/** Configuration PROD */
+var user = process.env.FTP_USER_PROD
+var password = process.env.FTP_PWD_PROD
+var remoteFolder = 'public_html/';
+var host = 'wn16.webd.pl'
+
+
 var port = 21
 var localFilesGlob = ['dist/**/*'];
-var remoteFolder = '/domains/hrmdrum.vot.pl/public_html/odaconnect';
 
 // helper function to build an FTP connection based on our configuration
 function getFtpConnection() {

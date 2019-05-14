@@ -21,6 +21,7 @@
 @import 'components/text-box';
 @import 'components/sector';
 @import 'components/contact-detail';
+@import 'components/cookies-popup';
 // @import 'components/team-member';
 @import 'components/map';
 
@@ -29,10 +30,7 @@
 @import 'sections/seekers'; 
 @import 'sections/employers';
 @import 'sections/sectors';
+@import 'sections/partners';
 @import 'sections/team';
 
 // @import '../../node_modules/leaflet/dist/leaflet.css';
-
-body {
-  min-height: 200vh;
-}

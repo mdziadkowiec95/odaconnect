@@ -1,6 +1,10 @@
 
 .map-section {
-  padding-top: 7rem
+  padding-top: 3rem;
+
+  @include breakpoint(lg) {
+    padding-top: 4rem; 
+  }
 }
 
 .map {

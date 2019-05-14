@@ -1,0 +1,49 @@
+.cookies {
+  position: fixed;
+  z-index: map-get($layers, cookies-popup);
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: .8rem 0;
+  background-color: rgba(map-get($colors, primary), .85);
+  animation: cookiesSlideIn .6s;
+
+  &.hidden {
+    display: none;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__text {
+    color: map-get($colors, white);
+    font-size: .8rem;
+  }
+
+  &__link {
+    &:link, &:visited {
+      color: map-get($colors, white);
+      font-weight: 700;
+    }
+  }
+
+  &__btn {
+    margin-left: .5rem;
+    padding: .3rem .5rem;
+    background: map-get($colors, white);
+  }
+}
+
+@keyframes cookiesSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

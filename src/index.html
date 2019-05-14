@@ -1,12 +1,12 @@
 <html lang="en">
 
 <head>
-  <meta name="robots" content="noindex,nofollow" />
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Odaconnect - odkryj nowe ścieżki rozwoju kariery</title>
   <meta name="description" content="Odaconnect to firma zajmująca się poszukiwaniem pracowników w wielu sektorach na rynku pracy. Znajdziesz u nas oferty pracy lub odpowiednich pracowników">
+  <meta name="keywords" content="odaconnect, praca, pracownik, pracownicy, sektory, budownictwo, stocznia, opieka medyczna, cv, brzesko">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Hind:400,600" rel="stylesheet">
   <!-- build:css css/app.css -->
@@ -18,10 +18,8 @@
 
 
 <body>
-
   <header class="header">
     <nav class="nav">
-
       <a href="#" class="nav-toggler">
         <span></span>
       </a>
@@ -44,6 +42,9 @@
             <a href="#o-nas" class="nav__link">O nas</a>
           </li>
           <li class="nav__item">
+            <a href="#partnerzy" class="nav__link">Nasi partnerzy</a>
+          </li>
+          <li class="nav__item">
             <a href="#kontakt" class="nav__link">Kontakt</a>
           </li>
         </ul>
@@ -54,7 +55,6 @@
     <div class="swiper-container">
       <div class="swiper-wrapper">
         <div class="swiper-slide swiper-slide--1">
-
           <div class="slogan">
             <h2 class="slogan__title">Właściwi ludzie<br><span class="slogan__title--description">na właściwym miejscu</span></h2>
           </div>
@@ -69,7 +69,7 @@
             <h2 class="slogan__title">Międzynarodowe środowisko pracy</h2>
           </div>
         </div>
-        <div class="swiper-slide swiper-slide--5">
+        <div class="swiper-slide swiper-slide--4">
           <div class="slogan">
             <h2 class="slogan__title">Działamy na różnych sektorach</h2>
           </div>
@@ -175,8 +175,9 @@
               <h3 class="sector__name">Budownictwo</h3>
               <div class="sector__content">
                 <p class="sector__description">
-                  Dostarczamy personel do wszystkich rodzajów projektów budowlanych. Nasi klienci to zarówno duże jak i lokalne firmy budowlane
-                  działające w sektorach budownictwa mieszkalnego, drogowego i hydrotechnicznego.
+                  Dostarczamy personel do wszystkich rodzajów projektów budowlanych.<br class="d-none d-lg-block"> Nasi klienci
+                  to zarówno duże jak i lokalne firmy budowlane działające w sektorach budownictwa mieszkalnego, drogowego
+                  i hydrotechnicznego.
                 </p>
               </div>
             </div>
@@ -194,7 +195,7 @@
             </div>
           </div>
 
-          <div class="sector sector--healthcare">
+          <div class="sector sector--shipyard">
             <div class="sector__body">
               <h3 class="sector__name">Przemysł stoczniowy</h3>
               <div class="sector__content">
@@ -206,7 +207,7 @@
             </div>
           </div>
 
-          <div class="sector sector--electrical">
+          <div class="sector sector--healthcare">
             <div class="sector__body">
               <h3 class="sector__name">Opieka medyczna</h3>
               <div class="sector__content">
@@ -242,7 +243,22 @@
           budownictwa, przemysłu gazowo-naftowego, stoczniowego, mechanicznego i medycznego. Dostarczamy odpowiedni personel
           dla naszych norweskich partnerów oraz świadczymy usługi na rzecz pracodawców z krajów UE.
         </p>
+      </div>
+    </section>
 
+    <section class="partners" id="partnerzy" data-section>
+      <div class="container">
+        <h2 class="section-heading section-heading--reversed"><span>Nasi partnerzy</span></h2>
+        <div class="partners__box">
+          <a href="http://www.odaconnect.no/en" class="partners__link" target="_blank">
+            <img src="assets/images/partners-1.svg" alt="" class="partners__logo partners__logo--oda">
+            <p class="partners__logo-text">Odwiedź stronę</p>
+          </a>
+          <a href="http://www.multimarine.no/" class="partners__link" target="_blank">
+            <img src="assets/images/partners-2.png" alt="" class="partners__logo partners__logo--marine">
+            <p class="partners__logo-text">Odwiedź stronę</p>
+          </a>
+        </div>
       </div>
     </section>
 
@@ -276,11 +292,8 @@
     </div>
     <div class="footer__bottom-bar">
       <div class="footer__terms">
-        <a href="polityka-prywatnosci" class="footer__terms-link">
-          Polityka prywatności
-        </a>
-        <a href="polityka-rodo" class="footer__terms-link">
-          Polityka RODO
+        <a href="cookies" class="footer__terms-link">
+          Polityka cookies
         </a>
       </div>
       <p class="footer__info">
@@ -290,6 +303,14 @@
 
     </div>
   </footer>
+
+  <div class="cookies hidden">
+    <div class="container cookies__container">
+      <p class="cookies__text">Ta strona korzysta z <a href="cookies" class="cookies__link">ciasteczek</a>. Dalsze korzystanie
+        ze strony oznacza, że zgadzasz się na ich użycie</p>
+      <button type="button" class="cookies__btn">Akceptuj</button>
+    </div>
+  </div>
 
   <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js" integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
     crossorigin=""></script>

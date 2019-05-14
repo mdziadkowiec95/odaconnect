@@ -18,27 +18,39 @@
   background: no-repeat top center / cover;
 
   &--1 {
-    background-image: linear-gradient(rgba(map-get($colors, primary), 0.5), rgba(map-get($colors, primary), 0.5)), url('../../assets/images/slider-1.jpg');
+    background-image: linear-gradient(rgba(map-get($colors, primary), 0.5), rgba(map-get($colors, primary), 0.5)), url('../../assets/images/slider-1-mobile.jpg');
+
+    @include breakpoint(md) {
+      background-image: linear-gradient(rgba(map-get($colors, primary), 0.5), rgba(map-get($colors, primary), 0.5)), url('../../assets/images/slider-1.jpg');
+    }
   }
 
   &--2 {
-    background-image: linear-gradient(rgba(map-get($colors, primary), 0.5), rgba(map-get($colors, primary), 0.5)), url('../../assets/images/slider-2.jpg');
+    background-image: linear-gradient(rgba(map-get($colors, primary), 0.5), rgba(map-get($colors, primary), 0.5)), url('../../assets/images/slider-2-mobile.jpg');
+
+    @include breakpoint(md) {
+      background-image: linear-gradient(rgba(map-get($colors, primary), 0.5), rgba(map-get($colors, primary), 0.5)), url('../../assets/images/slider-2.jpg');
+    }
   }
 
   &--3 {
-    background-image: linear-gradient(rgba(map-get($colors, primary), 0.5), rgba(map-get($colors, primary), 0.5)), url('../../assets/images/slider-3.jpg');
+    background-image: linear-gradient(rgba(map-get($colors, primary), 0.5), rgba(map-get($colors, primary), 0.5)), url('../../assets/images/slider-3-mobile.jpg');
+
+    @include breakpoint(md) {
+      background-image: linear-gradient(rgba(map-get($colors, primary), 0.5), rgba(map-get($colors, primary), 0.5)), url('../../assets/images/slider-3.jpg');
+    }
   }
 
   &--4 {
-    background-image: linear-gradient(rgba(map-get($colors, primary), 0.5), rgba(map-get($colors, primary), 0.5)), url('../../assets/images/slider-4.jpg');
-  }
+    background-image: linear-gradient(rgba(map-get($colors, primary), 0.5), rgba(map-get($colors, primary), 0.5)), url('../../assets/images/slider-6-mobile.jpg');
 
-  &--5 {
-    background-image: linear-gradient(rgba(map-get($colors, primary), 0.5), rgba(map-get($colors, primary), 0.5)), url('../../assets/images/slider-6.jpg');
+    @include breakpoint(md) { 
+      background-image: linear-gradient(rgba(map-get($colors, primary), 0.5), rgba(map-get($colors, primary), 0.5)), url('../../assets/images/slider-6.jpg');
+    }
   } 
-}
+} 
 
-.swiper-button-prev,
+.swiper-button-prev, 
 .swiper-button-next {
   top: auto;
   bottom: 5px;

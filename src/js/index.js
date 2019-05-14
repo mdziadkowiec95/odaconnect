@@ -7,6 +7,7 @@ import './base/checkTouchDevice';
 import './components/Navigation';
 import './vendors/Swiper';
 import './components/Map';
+import './components/CookiesPopup';
 
 
 (function () {
