@@ -31,14 +31,27 @@ const checkCookie = cookieName => {
   if (document.cookie !== '') {
     const cookies = document.cookie.split(/; */);
     const cookiesPairs = cookies.map(item => [item.split('=')[0], item.split('=')[1]]);
-    const cookie = cookiesPairs.findIndex(el => el[0] === cookieName);
+    // const cookie = cookiesPairs.findIndex(el => el[0] === cookieName);
 
-    return cookie;
+    let cookieIndex = -1;
+
+    for (let i = 0; i < cookiesPairs.length; i++) {
+      if (cookiesPairs[i][0] === cookieName) {
+        cookieIndex = i;
+
+        break;
+      }
+    }
+
+    return cookieIndex >= 0 ? true : false;
+  } else {
+    return false;
   }
 };
 
 const renderCookiesPopup = () => {
-  if (checkCookie('cookiesAccepted') !== -1) {
+
+  if (checkCookie('cookiesAccepted')) {
     document.body.removeChild(cookiesPopupEl);
   } else {
     cookiesPopupEl.classList.remove('hidden');

@@ -1,6 +1,10 @@
 .sectors {
   padding: 3rem 0;
 
+  @include breakpoint(md) {
+    padding-top: 4rem;
+  }
+
   &__description {
     color: map-get($colors, dark--lighten-2);
     text-align: center;
@@ -13,7 +17,7 @@
     @include breakpoint(sm) {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(3, auto); 
+      grid-template-rows: repeat(3, min-max(0, auto)); 
     }
     
   }

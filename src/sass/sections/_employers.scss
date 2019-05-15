@@ -1,6 +1,10 @@
 .employers {
   position: relative;
-  padding: 3rem 0;
+  padding: 1rem 0;
+
+  @include breakpoint(md) {
+    padding: 3rem 0;
+  }
 
   &__inner {
     @include breakpoint(md) {
