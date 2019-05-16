@@ -52,14 +52,14 @@ const checkCookie = cookieName => {
 const renderCookiesPopup = () => {
 
   if (checkCookie('cookiesAccepted')) {
-    document.body.removeChild(cookiesPopupEl);
+    if (cookiesPopupEl) document.body.removeChild(cookiesPopupEl);
   } else {
     cookiesPopupEl.classList.remove('hidden');
 
     const handleCookiesBtnClick = e => {
       setCookie('cookiesAccepted', 'true');
 
-      document.body.removeChild(cookiesPopupEl);
+      if (cookiesPopupEl) document.body.removeChild(cookiesPopupEl);
     };
 
     cookiesBtnAccept.addEventListener('click', handleCookiesBtnClick);

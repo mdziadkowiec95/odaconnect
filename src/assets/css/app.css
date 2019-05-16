@@ -677,14 +677,24 @@ h1,h2,h3,h4 {
   color: #fff;
 }
 
+.terms-wrapper {
+  padding: 5rem 1rem;
+}
+
+.terms-wrapper ol {
+  list-style: decimal;
+}
+
+.terms-wrapper ul {
+  padding-left: 2rem;
+  padding-bottom: 1rem;
+  list-style: disc;
+}
+
 .container {
   margin: 0 auto;
   padding: 0 15px;
   width: 100%;
-}
-
-.terms-wrapper {
-  padding: 7rem 0 3rem 0;
 }
 
 html {
@@ -1869,7 +1879,6 @@ button {
 
   .sector {
     border: 0;
-    cursor: pointer;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
