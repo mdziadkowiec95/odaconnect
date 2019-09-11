@@ -1,332 +1,468 @@
 <html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Odaconnect - odkryj nowe ścieżki rozwoju kariery</title>
+    <meta name="robots" content="noindex,nofollow" />
+    <meta
+      name="description"
+      content="Odaconnect to firma zajmująca się poszukiwaniem pracowników w wielu sektorach na rynku pracy. Znajdziesz u nas oferty pracy lub odpowiednich pracowników"
+    />
+    <meta
+      name="keywords"
+      content="odaconnect, praca, pracownik, pracownicy, sektory, budownictwo, stocznia, opieka medyczna, cv, brzesko"
+    />
+    <link rel="canonical" href="http://www.odaconnect.eu/" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Odaconnect - odkryj nowe ścieżki rozwoju kariery</title>
-  <meta name="description" content="Odaconnect to firma zajmująca się poszukiwaniem pracowników w wielu sektorach na rynku pracy. Znajdziesz u nas oferty pracy lub odpowiednich pracowników">
-  <meta name="keywords" content="odaconnect, praca, pracownik, pracownicy, sektory, budownictwo, stocznia, opieka medyczna, cv, brzesko">
-  <link rel="canonical" href="http://www.odaconnect.eu/cookies">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Hind:400,600" rel="stylesheet">
-  <!-- build:css css/app.css -->
-  <link rel="stylesheet" href="assets/css/app.css">
-  <!-- endbuild -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
-    crossorigin="" />
-  <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
-</head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Hind:400,600"
+      rel="stylesheet"
+    />
+    <!-- build:css css/app.css -->
+    <link rel="stylesheet" href="assets/css/app.css" />
+    <!-- endbuild -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+      integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+      crossorigin=""
+    />
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
 
-
-<body>
-  <header class="header">
-    <nav class="nav">
-      <a href="#" class="nav-toggler">
-        <span></span>
-      </a>
-      <div class="container nav__container">
-        <a href="" class="nav__brand">
-          <img src="assets/images/brand-logo-pl.jpg" alt="Logo firmy Odaconnect Poland" class="nav__logo">
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <a href="#" class="nav-toggler">
+          <span></span>
         </a>
+        <div class="container nav__container">
+          <a href="" class="nav__brand">
+            <img
+              src="assets/images/brand-logo-pl.jpg"
+              alt="Logo firmy Odaconnect Poland"
+              class="nav__logo"
+            />
+          </a>
 
-        <ul class="nav__menu">
-          <li class="nav__item">
-            <a href="#praca" class="nav__link">Praca</a>
-          </li>
-          <li class="nav__item">
-            <a href="#pracodawcy" class="nav__link">Pracodawcy</a>
-          </li>
-          <li class="nav__item">
-            <a href="#sektory" class="nav__link">Sektory</a>
-          </li>
-          <li class="nav__item">
-            <a href="#o-nas" class="nav__link">O nas</a>
-          </li>
-          <li class="nav__item">
-            <a href="#partnerzy" class="nav__link">Nasi partnerzy</a>
-          </li>
-          <li class="nav__item">
-            <a href="#kontakt" class="nav__link">Kontakt</a>
-          </li>
-        </ul>
+          <ul class="nav__menu">
+            <li class="nav__item">
+              <a href="#praca" class="nav__link">Praca</a>
+            </li>
+            <li class="nav__item">
+              <a href="#pracodawcy" class="nav__link">Pracodawcy</a>
+            </li>
+            <li class="nav__item">
+              <a href="#sektory" class="nav__link">Sektory</a>
+            </li>
+            <li class="nav__item">
+              <a href="#o-nas" class="nav__link">O nas</a>
+            </li>
+            <li class="nav__item">
+              <a href="#partnerzy" class="nav__link">Nasi partnerzy</a>
+            </li>
+            <li class="nav__item">
+              <a href="#kontakt" class="nav__link">Kontakt</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Swiper -->
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide swiper-slide--1">
+            <div class="slogan">
+              <h2 class="slogan__title">
+                Właściwi ludzie<br /><span class="slogan__title--description"
+                  >na właściwym miejscu</span
+                >
+              </h2>
+            </div>
+          </div>
+          <div class="swiper-slide swiper-slide--2">
+            <div class="slogan">
+              <h2 class="slogan__title slogan__title--small">
+                Odkryj nowe ścieżki kariery
+              </h2>
+            </div>
+          </div>
+          <div class="swiper-slide swiper-slide--3">
+            <div class="slogan">
+              <h2 class="slogan__title">Międzynarodowe środowisko pracy</h2>
+            </div>
+          </div>
+          <div class="swiper-slide swiper-slide--4">
+            <div class="slogan">
+              <h2 class="slogan__title">Działamy na różnych sektorach</h2>
+            </div>
+          </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
       </div>
-    </nav>
-
-    <!-- Swiper -->
-    <div class="swiper-container">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide swiper-slide--1">
-          <div class="slogan">
-            <h2 class="slogan__title">Właściwi ludzie<br><span class="slogan__title--description">na właściwym miejscu</span></h2>
-          </div>
-        </div>
-        <div class="swiper-slide swiper-slide--2">
-          <div class="slogan">
-            <h2 class="slogan__title slogan__title--small">Odkryj nowe ścieżki kariery</h2>
-          </div>
-        </div>
-        <div class="swiper-slide swiper-slide--3">
-          <div class="slogan">
-            <h2 class="slogan__title">Międzynarodowe środowisko pracy</h2>
-          </div>
-        </div>
-        <div class="swiper-slide swiper-slide--4">
-          <div class="slogan">
-            <h2 class="slogan__title">Działamy na różnych sektorach</h2>
-          </div>
-        </div>
-      </div>
-      <!-- Add Pagination -->
-      <div class="swiper-pagination"></div>
-      <!-- Add Arrows -->
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-    </div>
-    <section class="reason">
-      <div class="reason__container">
-        <a href="#praca" class="reason__box reason__box--lighten" title="Przewiń do sekcji dla pracownika">
-          <h3 class="reason__title">DLA PRACOWNIKA</h3>
-          <p class="reason__description">Szukasz nowych możliwości rozwoju kariery zawodowej? Interesuje Cię praca w międzynarodowym
-            środowisku? Kliknij i zobacz co oferujemy. </p>
-        </a>
-        <a href="#pracodawcy" class="reason__box" title="Przewiń do sekcji dla pracodawcy">
-          <h3 class="reason__title">DLA PRACODAWCY</h3>
-          <p class="reason__description">Naszym klientom oferujemy kompleksowe usługi związane z rekrutacją i leasingiem
-            pracowniczym. </p>
-        </a>
-      </div>
-    </section>
-  </header>
-
-  <main>
-    <section class="seekers" id="praca" data-section>
-      <div class="container">
-        <h2 class="section-heading"><span>Praca dla nas</span></h2>
-        <p class="seekers__description">
-          Jako nasz pracownik na rynkach krajów UE jesteś zatrudniony przez nas, pracując dla jednego z naszym klientów. Na rynkach
-          skandynawskich zatrudniony będziesz przez naszych norweskich partnerów- dajemy gwarancję legalnego zatrudnienia
-          przez norweskich pracodawców, na warunkach prawa norweskiego.
-        </p>
-        <div class="seekers__inner">
-          <div class="checklist checklist--reverse seekers__checklist">
-            <h3 class="checklist__heading">Co oferujemy?</h3>
-            <ul class="checklist__list">
-              <li class="checklist__list-item">konkurencyjne warunki pracy</li>
-              <li class="checklist__list-item">długoterminową współpracę</li>
-              <li class="checklist__list-item">zróżnicowane środowisko pracy</li>
-              <li class="checklist__list-item">możliwość elastycznego czasu pracy</li>
-              <li class="checklist__list-item">praca w rotacjach</li>
-              <li class="checklist__list-item">kursy i szkolenia</li>
-            </ul>
-          </div>
-
-          <div class="register seekers__register">
-            <h3 class="subheading">Zarejestruj swoje CV</h3>
-            <p class="register__description">
-              Osobom poszukującym pracy i osobom, które są zainteresowane otrzymaniem sprofilowanych ofert pracy w przyszłości, rekomendujemy
-              zarejestrowanie swojego CV w naszym systemie obsługującym proces rekrutacji. Pod poniższym linkiem znajdą Państwo
-              również aktualne ogłoszenia o pracę.
+      <section class="reason">
+        <div class="reason__container">
+          <a
+            href="#praca"
+            class="reason__box reason__box--lighten"
+            title="Przewiń do sekcji dla pracownika"
+          >
+            <h3 class="reason__title">DLA PRACOWNIKA</h3>
+            <p class="reason__description">
+              Szukasz nowych możliwości rozwoju kariery zawodowej? Interesuje
+              Cię praca w międzynarodowym środowisku? Kliknij i zobacz co
+              oferujemy.
             </p>
-            <a href="https://odaconnectpoland.recman.no/login.php" class="btn btn--primary register__btn" title="Przejdź do strony z rejestracją"
-              target="_blank" aria-hidden="true">Zarejestruj tutaj CV
+          </a>
+          <a
+            href="#pracodawcy"
+            class="reason__box"
+            title="Przewiń do sekcji dla pracodawcy"
+          >
+            <h3 class="reason__title">DLA PRACODAWCY</h3>
+            <p class="reason__description">
+              Naszym klientom oferujemy kompleksowe usługi związane z rekrutacją
+              i leasingiem pracowniczym.
+            </p>
+          </a>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="seekers" id="praca" data-section>
+        <div class="container">
+          <h2 class="section-heading"><span>Praca dla nas</span></h2>
+          <p class="seekers__description">
+            Jako nasz pracownik na rynkach krajów UE jesteś zatrudniony przez
+            nas, pracując dla jednego z naszym klientów. Na rynkach
+            skandynawskich zatrudniony będziesz przez naszych norweskich
+            partnerów- dajemy gwarancję legalnego zatrudnienia przez norweskich
+            pracodawców, na warunkach prawa norweskiego.
+          </p>
+          <div class="seekers__inner">
+            <div class="checklist checklist--reverse seekers__checklist">
+              <h3 class="checklist__heading">Co oferujemy?</h3>
+              <ul class="checklist__list">
+                <li class="checklist__list-item">
+                  konkurencyjne warunki pracy
+                </li>
+                <li class="checklist__list-item">długoterminową współpracę</li>
+                <li class="checklist__list-item">
+                  zróżnicowane środowisko pracy
+                </li>
+                <li class="checklist__list-item">
+                  możliwość elastycznego czasu pracy
+                </li>
+                <li class="checklist__list-item">praca w rotacjach</li>
+                <li class="checklist__list-item">kursy i szkolenia</li>
+              </ul>
+            </div>
+
+            <div class="register seekers__register">
+              <h3 class="subheading">Zarejestruj swoje CV</h3>
+              <p class="register__description">
+                Osobom poszukującym pracy i osobom, które są zainteresowane
+                otrzymaniem sprofilowanych ofert pracy w przyszłości,
+                rekomendujemy zarejestrowanie swojego CV w naszym systemie
+                obsługującym proces rekrutacji. Pod poniższym linkiem znajdą
+                Państwo również aktualne ogłoszenia o pracę.
+              </p>
+              <a
+                href="https://odaconnectpoland.recman.no/register.php"
+                class="btn btn--primary register__btn"
+                title="Przejdź do strony z rejestracją"
+                target="_blank"
+                aria-hidden="true"
+                >Zarejestruj tutaj CV
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="employers" id="pracodawcy" data-section>
+        <div class="container">
+          <h2 class="section-heading"><span>Oferta dla Pracodawcy</span></h2>
+          <div class="employers__inner">
+            <div class="text-box employers__hiring">
+              <h3 class="subheading text-box__heading">Zatrudnienie</h3>
+              <p class="text-box__description">
+                Oferujemy kompleksowe usługi związane z dostarczeniem
+                odpowiednich pracowników o kwalifikacjach i cechach zgodnych z
+                oczekiwaniami pracodawcy. Rekrutujemy pracowników docelowo
+                zatrudnionych bezpośrednio u Pracodawcy a także oferujemy
+                usługę leasingu pracowniczego.
+              </p>
+            </div>
+
+            <div class="recruitment employers__recruitment">
+              <h3 class="subheading subheading--light reacruitment__heading">
+                Rekrutacja
+              </h3>
+              <p class="recruitment__description">
+                Wyszukujemy kandydatów, przeprowadzamy rozmowy kwalifikacyjne
+                oraz weryfikujmy umiejętności. Nasze procedury są elastyczne i
+                dostosowane do potrzeb naszych klientów. Kompleksowo obsługujemy
+                proces rekrutacji pracowników, dzięki czemu nasi klienci mogą
+                skupić się na swojej podstawowej działalności.
+              </p>
+              <p class="recruitment__description">
+                Jesteśmy otwarci na sugestie klientów- zarówno w trakcie procesu
+                rekrutacji jak i po jego zakończeniu. Cenimy sobie stały kontakt
+                z naszymi partnerami. Naszym priorytetem jest długotrwała
+                współpraca.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sectors" id="sektory" data-section>
+        <div class="container">
+          <h2 class="section-heading"><span>Sektory</span></h2>
+          <p class="sectors__description">
+            ODA Connect Poland dostarcza pracowników dla wielu sektorów
+            gospodarki.
+          </p>
+          <div class="sectors__grid">
+            <div class="sector sector--construction">
+              <div class="sector__body">
+                <h3 class="sector__name">Budownictwo</h3>
+                <div class="sector__content">
+                  <p class="sector__description">
+                    Dostarczamy personel do wszystkich rodzajów projektów
+                    budowlanych.<br class="d-none d-lg-block" />
+                    Nasi klienci to zarówno duże jak i lokalne firmy budowlane
+                    działające w sektorach budownictwa mieszkalnego, drogowego i
+                    hydrotechnicznego.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="sector sector--oil">
+              <div class="sector__body">
+                <h3 class="sector__name">Przemysł naftowy i gazowy</h3>
+                <div class="sector__content">
+                  <p class="sector__description">
+                    Nasi klienci w przemyśle naftowym i gazowym to przede
+                    wszystkim firmy zajmujące się usługami naftowymi. Nasz
+                    personel wykonuje prace morskie i lądowe w ramach
+                    konserwacji i modyfikacji platform wiertniczych.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="sector sector--shipyard">
+              <div class="sector__body">
+                <h3 class="sector__name">Przemysł stoczniowy</h3>
+                <div class="sector__content">
+                  <p class="sector__description">
+                    Dostarczamy specjalistów zawodów związanych z przemysłem
+                    stoczniowym wykonujących prace przy prefabrykacji, produkcji
+                    i remontach statków morskich- piaskarzy, malarzy, monterów
+                    rurociągów okrętowych, monterów rusztowań, etc.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="sector sector--healthcare">
+              <div class="sector__body">
+                <h3 class="sector__name">Opieka medyczna</h3>
+                <div class="sector__content">
+                  <p class="sector__description">
+                    Dla rynków skandynawskich dostarczamy posiadający
+                    odpowiednie szkolenia i certyfikaty personel medyczny dla
+                    publicznej i prywatnej służby zdrowia.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="sector sector--other">
+              <div class="sector__body">
+                <h3 class="sector__name">Inne</h3>
+                <div class="sector__content">
+                  <p class="sector__description">
+                    Jeśli jako pracodawca szukasz pracowników lub jako pracownik
+                    zatrudnienia w innych sektorach zachęcamy do kontaktu.
+                    Dostarczamy personel również do branż związanych z
+                    hotelarstwem, motoryzacją, handlem i usługami oraz wielu
+                    innych.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="team" id="o-nas" data-section>
+        <div class="container">
+          <h2 class="section-heading"><span>O nas</span></h2>
+          <p class="team__description">
+            ODA Connect Poland sp. z o.o. (Agencja zatrudnienia nr 22111 ) jest spółką zależną ODA Connect A.S. i Multi Marine A.S.- norweskich firm zatrudniających pracowników na potrzeby własne oraz działających jako agencje zatrudnienia w sektorach budownictwa, przemysłu gazowo-naftowego, stoczniowego, mechanicznego i medycznego. Dostarczamy odpowiedni personel dla naszych norweskich partnerów oraz świadczymy usługi na rzecz pracodawców z krajów UE.
+          </p>
+        </div>
+      </section>
+
+      <section class="partners" id="partnerzy" data-section>
+        <div class="container">
+          <h2 class="section-heading section-heading--reversed">
+            <span>Nasi partnerzy</span>
+          </h2>
+          <div class="partners__box">
+            <a
+              href="http://www.odaconnect.no/en"
+              class="partners__link"
+              title="Przejdź do strony Odaconnect - oddział w Norwegii"
+              target="_blank"
+            >
+              <img
+                src="assets/images/partners-1.svg"
+                alt="Logo firmy Odaconnect - oddział w Norwegii"
+                class="partners__logo partners__logo--oda"
+                aria-hidden="true"
+              />
+              <p class="partners__logo-text">Odwiedź stronę</p>
+            </a>
+            <a
+              href="http://www.multimarine.no/"
+              class="partners__link"
+              title="Przejdź do strony firmy Multimarine"
+              target="_blank"
+            >
+              <img
+                src="assets/images/partners-2.png"
+                alt="Logo firmy Multimarine - jednej z naszych firm partnerskich"
+                class="partners__logo partners__logo--marine"
+                aria-hidden="true"
+              />
+              <p class="partners__logo-text">Odwiedź stronę</p>
             </a>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="employers" id="pracodawcy" data-section>
+      <section class="map-section">
+        <div id="map" class="map"></div>
+      </section>
+    </main>
+
+    <footer class="footer" id="kontakt" data-section>
       <div class="container">
-        <h2 class="section-heading"><span>Oferta dla Pracodawcy</span></h2>
-        <div class="employers__inner">
-          <div class="text-box employers__hiring">
-            <h3 class="subheading text-box__heading">Zatrudnienie</h3>
-            <p class="text-box__description">
-              Oferujemy kompleksowe usługi związane z dostarczeniem odpowiednich pracowników o kwalifikacjach i cechach zgodnych z oczekiwaniami
-              pracodawcy. Rekrutujemy pracowników docelowo zatrudnionych bezpośrednio u Pracodawcy a także oferujemy usługę leasingu
-              pracowniczego.
-            </p>
-          </div>
-
-          <div class="recruitment employers__recruitment">
-            <h3 class="subheading subheading--light reacruitment__heading">Rekrutacja</h3>
-            <p class="recruitment__description">
-              Wyszukujemy kandydatów, przeprowadzamy rozmowy kwalifikacyjne oraz weryfikujmy umiejętności. Nasze procedury są elastyczne
-              i dostosowane do potrzeb naszych klientów. Kompleksowo obsługujemy proces rekrutacji pracowników, dzięki czemu
-              nasi klienci mogą skupić się na swojej podstawowej działalności.
-            </p>
-            <p class="recruitment__description">
-              Jesteśmy otwarci na sugestie klientów- zarówno w trakcie procesu rekrutacji jak i po jego zakończeniu. Cenimy sobie stały
-              kontakt z naszymi partnerami. Naszym priorytetem jest długotrwała współpraca.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="sectors" id="sektory" data-section>
-      <div class="container">
-        <h2 class="section-heading"><span>Sektory</span></h2>
-        <p class="sectors__description">
-          ODA Connect Poland dostarcza pracowników dla wielu sektorów gospodarki.
-        </p>
-        <div class="sectors__grid">
-          <div class="sector sector--construction">
-            <div class="sector__body">
-              <h3 class="sector__name">Budownictwo</h3>
-              <div class="sector__content">
-                <p class="sector__description">
-                  Dostarczamy personel do wszystkich rodzajów projektów budowlanych.<br class="d-none d-lg-block"> Nasi klienci
-                  to zarówno duże jak i lokalne firmy budowlane działające w sektorach budownictwa mieszkalnego, drogowego
-                  i hydrotechnicznego.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="sector sector--oil">
-            <div class="sector__body">
-              <h3 class="sector__name">Przemysł naftowy i gazowy</h3>
-              <div class="sector__content">
-                <p class="sector__description">
-                  Nasi klienci w przemyśle naftowym i gazowym to przede wszystkim firmy zajmujące się usługami naftowymi. Nasz personel wykonuje
-                  prace morskie i lądowe w ramach konserwacji i modyfikacji platform wiertniczych.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="sector sector--shipyard">
-            <div class="sector__body">
-              <h3 class="sector__name">Przemysł stoczniowy</h3>
-              <div class="sector__content">
-                <p class="sector__description">
-                  Dostarczamy specjalistów zawodów związanych z przemysłem stoczniowym wykonujących prace przy prefabrykacji, produkcji i remontach
-                  statków morskich- piaskarzy, malarzy, monterów rurociągów okrętowych, monterów rusztowań, etc.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="sector sector--healthcare">
-            <div class="sector__body">
-              <h3 class="sector__name">Opieka medyczna</h3>
-              <div class="sector__content">
-                <p class="sector__description">
-                  Dla rynków skandynawskich dostarczamy posiadający odpowiednie szkolenia i certyfikaty personel medyczny dla publicznej i
-                  prywatnej służby zdrowia.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="sector sector--other">
-            <div class="sector__body">
-              <h3 class="sector__name">Inne</h3>
-              <div class="sector__content">
-                <p class="sector__description">
-                  Jeśli jako pracodawca szukasz pracowników lub jako pracownik zatrudnienia w innych sektorach zachęcamy do kontaktu. Dostarczamy
-                  personel również do branż związanych z hotelarstwem, motoryzacją, handlem i usługami oraz wielu innych.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="team" id="o-nas" data-section>
-      <div class="container">
-        <h2 class="section-heading"><span>O nas</span></h2>
-        <p class="team__description">
-          ODA Connect Poland sp. z o.o. (Agencja zatrudnienia nr 13872 ) jest spółką zależną ODA Connect A.S. i Multi Marine A.S.-
-          norweskich firm zatrudniających pracowników na potrzeby własne oraz działających jako agencje zatrudnienia w sektorach
-          budownictwa, przemysłu gazowo-naftowego, stoczniowego, mechanicznego i medycznego. Dostarczamy odpowiedni personel
-          dla naszych norweskich partnerów oraz świadczymy usługi na rzecz pracodawców z krajów UE.
-        </p>
-      </div>
-    </section>
-
-    <section class="partners" id="partnerzy" data-section>
-      <div class="container">
-        <h2 class="section-heading section-heading--reversed"><span>Nasi partnerzy</span></h2>
-        <div class="partners__box">
-          <a href="http://www.odaconnect.no/en" class="partners__link" title="Przejdź do strony Odaconnect - oddział w Norwegii" target="_blank">
-            <img src="assets/images/partners-1.svg" alt="Logo firmy Odaconnect - oddział w Norwegii" class="partners__logo partners__logo--oda"
-              aria-hidden="true">
-            <p class="partners__logo-text">Odwiedź stronę</p>
+        <h3 class="section-heading section-heading--light footer__brand">
+          <span>ODA CONNECT POLAND</span>
+        </h3>
+        <p class="footer__copartnership">sp. z o.o.</p>
+        <p class="footer__address">ul. Rzeźnicza 5, 32-800 Brzesko, Poland</p>
+        <div class="footer__contact">
+           <a
+            href="https://www.facebook.com/Oda-Connect-Poland-110694380266059"
+            target="_blank"
+            class="contact-detail contact-detail--light"
+            title="Odwiedź profil Facebook"
+          >
+             <svg class="contact-detail__icon contact-detail__icon--light" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z"/></svg> 
+           <p class="contact-detail__value">facebook</p>
           </a>
-          <a href="http://www.multimarine.no/" class="partners__link" title="Przejdź do strony firmy Multimarine" target="_blank">
-            <img src="assets/images/partners-2.png" alt="Logo firmy Multimarine - jednej z naszych firm partnerskich" class="partners__logo partners__logo--marine"
-              aria-hidden="true">
-            <p class="partners__logo-text">Odwiedź stronę</p>
+          <a
+            href="tel:+48669669048"
+            class="contact-detail contact-detail--light"
+            title="Skontaktuj się telefoniczne"
+          >
+            <svg
+              class="contact-detail__icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3.445 17.827c-3.684 1.684-9.401-9.43-5.8-11.308l1.053-.519 1.746 3.409-1.042.513c-1.095.587 1.185 5.04 2.305 4.497l1.032-.505 1.76 3.397-1.054.516z"
+              />
+            </svg>
+            <p class="contact-detail__value">+48 669 669 048</p>
+          </a>
+
+          <a
+            href="mailto:bartosz@odaconnect.no"
+            class="contact-detail contact-detail--light"
+            title="Skontaktuj się za pomocą email"
+          >
+            <svg
+              class="contact-detail__icon contact-detail__icon--light"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 .02c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.99 6.98l-6.99 5.666-6.991-5.666h13.981zm.01 10h-14v-8.505l7 5.673 7-5.672v8.504z"
+              />
+            </svg>
+            <p class="contact-detail__value contact-detail__value--light">
+              bartosz@odaconnect.no
+            </p>
           </a>
         </div>
+           
+        <p class="footer__copyright">
+          Made by <a href="mailto:biuro@grupal8.pl">GRUPA L8</a>
+        </p>
       </div>
-    </section>
-
-    <section class="map-section">
-      <div id="map" class="map"></div>
-    </section>
-  </main>
-
-  <footer class="footer" id="kontakt" data-section>
-    <div class="container">
-      <h3 class="section-heading section-heading--light footer__brand"><span>ODA CONNECT POLAND</span></h3>
-      <p class="footer__copartnership">sp. z o.o.</p>
-      <p class="footer__address">ul. Rzeźnicza 5, 32-800 Brzesko, Poland</p>
-      <div class="footer__contact">
-        <a href="tel:+48669669048" class="contact-detail contact-detail--light" title="Skontaktuj się telefoniczne">
-          <svg class="contact-detail__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3.445 17.827c-3.684 1.684-9.401-9.43-5.8-11.308l1.053-.519 1.746 3.409-1.042.513c-1.095.587 1.185 5.04 2.305 4.497l1.032-.505 1.76 3.397-1.054.516z"
-            /></svg>
-          <p class="contact-detail__value">+48 669 669 048</p>
-        </a>
-        <a href="mailto:bartosz@odaconnect.no" class="contact-detail contact-detail--light" title="Skontaktuj się za pomocą email">
-          <svg class="contact-detail__icon contact-detail__icon--light" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-            <path d="M12 .02c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.99 6.98l-6.99 5.666-6.991-5.666h13.981zm.01 10h-14v-8.505l7 5.673 7-5.672v8.504z"
-            /></svg>
-          <p class="contact-detail__value contact-detail__value--light">bartosz@odaconnect.no</p>
-        </a>
+      <div class="footer__bottom-bar">
+        <div class="footer__terms">
+          <a
+            href="cookies"
+            class="footer__terms-link"
+            title="Przejdź do podstrony poświęconej polityce cookies"
+          >
+            Polityka cookies
+          </a>
+        </div>
+        <p class="footer__info">
+          Ul. Rzeźnicza 5 32-800 Brzesko. Sąd Rejonowy dla Krakowa Śródmieścia w Krakowie. XI Wydział Gospodarczy. KRS 0000611566. Kapitał zakładowy: 25.000 złotych. NIP: 6762504966
+        </p>
       </div>
-      <p class="footer__copyright">Made by <a href="mailto:biuro@grupal8.pl">GRUPA L8</a></p>
-    </div>
-    <div class="footer__bottom-bar">
-      <div class="footer__terms">
-        <a href="cookies" class="footer__terms-link" title="Przejdź do podstrony poświęconej polityce cookies">
-          Polityka cookies
-        </a>
+    </footer>
+
+    <div class="cookies hidden">
+      <div class="container cookies__container">
+        <p class="cookies__text">
+          Ta strona korzysta z
+          <a href="cookies" class="cookies__link">ciasteczek</a>. Dalsze
+          korzystanie ze strony oznacza, że zgadzasz się na ich użycie
+        </p>
+        <button type="button" class="cookies__btn">Akceptuj</button>
       </div>
-      <p class="footer__info">
-        Ul. Miechowska 5b/1 30-055 Kraków. Sąd Rejonowy dla Krakowa Śródmieścia w Krakowie. XI Wydział Gospodarczy. KRS 0000611566.
-        Kapitał zakładowy: 25.000 złotych. NIP: 6762504966
-      </p>
-
     </div>
-  </footer>
 
-  <div class="cookies hidden">
-    <div class="container cookies__container">
-      <p class="cookies__text">Ta strona korzysta z <a href="cookies" class="cookies__link">ciasteczek</a>. Dalsze korzystanie
-        ze strony oznacza, że zgadzasz się na ich użycie</p>
-      <button type="button" class="cookies__btn">Akceptuj</button>
-    </div>
-  </div>
-
-  <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js" integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
-    crossorigin=""></script>
-  <!-- build:js js/bundle.js -->
-  <script src="assets/js/bundle.js"></script>
-  <!-- endbuild -->
-</body>
-
-
-
+    <script
+      src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+      integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+      crossorigin=""
+    ></script>
+    <!-- build:js js/bundle.js -->
+    <script src="assets/js/bundle.js"></script>
+    <!-- endbuild -->
+  </body>
 </html>
