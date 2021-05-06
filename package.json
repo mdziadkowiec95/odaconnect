@@ -39,6 +39,6 @@
   "dependencies": {
     "leaflet": "^1.4.0",
     "smoothscroll-polyfill": "^0.4.4",
-    "underscore": "^1.9.1"
+    "underscore": "^1.12.1"
   }
 }
