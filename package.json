@@ -31,7 +31,7 @@
     "gulp-util": "^3.0.8",
     "imagemin-jpegtran": "^6.0.0",
     "jpegtran-bin": "^4.0.0",
-    "swiper": "^4.5.0",
+    "swiper": "^6.5.1",
     "vinyl-ftp": "^0.6.1",
     "webpack": "^4.29.3",
     "webpack-stream": "^5.2.1"
